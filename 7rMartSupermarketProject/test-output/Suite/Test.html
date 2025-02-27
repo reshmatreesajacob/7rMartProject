@@ -1,0 +1,228 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>13/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Feb 27 11:59:47 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>43 seconds (43530 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testScript.SubCategoryTest.addNewItemToSubCategoryList()'><b>addNewItemToSubCategoryList</b><br>Test class: testScript.SubCategoryTest</td>
+<td><div><pre>org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : C:\Users\RESHMA\git\7rmart_Supermarket_Project\7rMartProject\src\test\resources\sports Toy car.jpg
+  (Session info: chrome=133.0.6943.127)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [804cbceb5e6cb5866f8e1abe4e6a4092, sendKeysToElement {value=[Ljava.lang.CharSequence;@5177e388, id=f.A6A41392DE476B75B0193C8E11F4DD2E.d.C05DFC6FF2EEF266F2A24F608AFDDC47.e.177}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.127, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\RESHMA\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49890}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49890/devtoo..., se:cdpVersion: 133.0.6943.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (804cbceb5e6cb5866f8e1abe4e6a4092)] -&gt; xpath: //input[@id=&apos;main_img&apos;]]
+Session ID: 804cbceb5e6cb5866f8e1abe4e6a4092
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at testScript.SubCategoryTest.addNewItemToSubCategoryList(SubCategoryTest.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1318209130", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1318209130'><pre>org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : C:\Users\RESHMA\git\7rmart_Supermarket_Project\7rMartProject\src\test\resources\sports Toy car.jpg
+  (Session info: chrome=133.0.6943.127)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [804cbceb5e6cb5866f8e1abe4e6a4092, sendKeysToElement {value=[Ljava.lang.CharSequence;@5177e388, id=f.A6A41392DE476B75B0193C8E11F4DD2E.d.C05DFC6FF2EEF266F2A24F608AFDDC47.e.177}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.127, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\RESHMA\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49890}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49890/devtoo..., se:cdpVersion: 133.0.6943.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (804cbceb5e6cb5866f8e1abe4e6a4092)] -&gt; xpath: //input[@id=&apos;main_img&apos;]]
+Session ID: 804cbceb5e6cb5866f8e1abe4e6a4092
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at testScript.SubCategoryTest.addNewItemToSubCategoryList(SubCategoryTest.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>1</td>
+<td>testScript.SubCategoryTest@68c9133c</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testScript.SubCategoryTest.refreshPageUsingResetButton()'><b>refreshPageUsingResetButton</b><br>Test class: testScript.SubCategoryTest</td>
+<td></td>
+<td>1</td>
+<td>testScript.SubCategoryTest@68c9133c</td></tr>
+<tr>
+<td title='testScript.LoginTest.verifyUserLoginWithInvalidUsernameAndValidPassword()'><b>verifyUserLoginWithInvalidUsernameAndValidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with invalid username and valid password</td>
+<td></td>
+<td>0</td>
+<td>testScript.LoginTest@5e2c3d18</td></tr>
+<tr>
+<td title='testScript.ManageNewsTest.searchNewsInManageNews()'><b>searchNewsInManageNews</b><br>Test class: testScript.ManageNewsTest</td>
+<td></td>
+<td>1</td>
+<td>testScript.ManageNewsTest@48075da3</td></tr>
+<tr>
+<td title='testScript.LoginTest.verifyUserLoginWithValidUsernameAndInvalidPassword()'><b>verifyUserLoginWithValidUsernameAndInvalidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with valid username and invalid password</td>
+<td></td>
+<td>0</td>
+<td>testScript.LoginTest@5e2c3d18</td></tr>
+<tr>
+<td title='testScript.AdminUserTest.refreshPageUsingResetButton()'><b>refreshPageUsingResetButton</b><br>Test class: testScript.AdminUserTest</td>
+<td></td>
+<td>1</td>
+<td>testScript.AdminUserTest@7a35b0f5</td></tr>
+<tr>
+<td title='testScript.AdminUserTest.addNewUserToUsersList()'><b>addNewUserToUsersList</b><br>Test class: testScript.AdminUserTest</td>
+<td></td>
+<td>1</td>
+<td>testScript.AdminUserTest@7a35b0f5</td></tr>
+<tr>
+<td title='testScript.SubCategoryTest.searchItemsInTheSubCategoryList()'><b>searchItemsInTheSubCategoryList</b><br>Test class: testScript.SubCategoryTest</td>
+<td></td>
+<td>1</td>
+<td>testScript.SubCategoryTest@68c9133c</td></tr>
+<tr>
+<td title='testScript.ManageNewsTest.refreshPageUsingTheResetButton()'><b>refreshPageUsingTheResetButton</b><br>Test class: testScript.ManageNewsTest</td>
+<td></td>
+<td>3</td>
+<td>testScript.ManageNewsTest@48075da3</td></tr>
+<tr>
+<td title='testScript.LoginTest.verifyUserLoginWithValidUsernameAndValidPassword()'><b>verifyUserLoginWithValidUsernameAndValidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with valid Credentials</td>
+<td></td>
+<td>0</td>
+<td>testScript.LoginTest@5e2c3d18</td></tr>
+<tr>
+<td title='testScript.LoginTest.verifyUserLoginWithInvalidUsernameAndInvalidPassword()'><b>verifyUserLoginWithInvalidUsernameAndInvalidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with invalid username and invalid password</td>
+<td></td>
+<td>0</td>
+<td>testScript.LoginTest@5e2c3d18</td></tr>
+<tr>
+<td title='testScript.AdminUserTest.searchUsersInTheUsersList()'><b>searchUsersInTheUsersList</b><br>Test class: testScript.AdminUserTest</td>
+<td></td>
+<td>1</td>
+<td>testScript.AdminUserTest@7a35b0f5</td></tr>
+<tr>
+<td title='testScript.HomeTest.verifyUserLogoutFromPage()'><b>verifyUserLogoutFromPage</b><br>Test class: testScript.HomeTest<br>Test method: Verification of user can use the Logout functionality </td>
+<td></td>
+<td>0</td>
+<td>testScript.HomeTest@644baf4a</td></tr>
+<tr>
+<td title='testScript.ManageNewsTest.createNewNewsInManageNews()'><b>createNewNewsInManageNews</b><br>Test class: testScript.ManageNewsTest</td>
+<td></td>
+<td>1</td>
+<td>testScript.ManageNewsTest@48075da3</td></tr>
+</table><p>
+</body>
+</html>
