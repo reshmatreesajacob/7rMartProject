@@ -1,5 +1,6 @@
 package testScript;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -8,21 +9,26 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
+import pages.HomePage;
+import pages.LoginPage;
+import utilities.ExcelUtility;
 
-public class HomeTest extends Base 
-{
+public class HomeTest extends Base {
+
 	@Test(description = "Verification of user can use the Logout functionality ")
-	public void verifyUserLogoutFromPage()
-	{
-		WebElement username=driver.findElement(By.xpath("//input[@placeholder='Username']"));
-		username.sendKeys("admin");
-		WebElement password=driver.findElement(By.xpath("//input[@placeholder='Password']"));
-		password.sendKeys("admin");
-		WebElement signIn=driver.findElement(By.xpath("//button[text()='Sign In']"));
-		signIn.click();
-		WebElement adminDropDown=driver.findElement(By.xpath("//img[@class='img-circle']"));
-		adminDropDown.click();
-		WebElement logoutButton=driver.findElement(By.xpath("//i[@class='ace-icon fa fa-power-off']"));
-		logoutButton.click();
-}
+	public void verifyUserLogoutFromPage() throws IOException {
+
+		String username = ExcelUtility.readStringData(1, 0, "LoginPage");
+		String password = ExcelUtility.readStringData(1, 1, "LoginPage");
+		LoginPage login = new LoginPage(driver);
+		login.enterUsernameOnUsernameField(username);
+		login.enterPasswordOnPasswordField(password);
+		login.clickOnCheckbox();
+		login.clickOnSignInButton();
+
+		HomePage home = new HomePage(driver);
+		home.clickOnAdminButton();
+		home.clickOnTheLogoutButton();
+
+	}
 }
