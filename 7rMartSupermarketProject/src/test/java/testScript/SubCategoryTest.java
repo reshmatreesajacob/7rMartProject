@@ -1,5 +1,7 @@
 package testScript;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -7,17 +9,24 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
+import pages.LoginPage;
+import utilities.ExcelUtility;
 
 public class SubCategoryTest extends Base
 {
 	
 	@Test
-	public void addNewItemToSubCategoryList()
+	public void addNewItemToSubCategoryList() throws IOException
 	{
 		
-		driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("admin");
-		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin");
-		driver.findElement(By.xpath("//button[text()='Sign In']")).click();
+		String username=ExcelUtility.readStringData(1, 0, "LoginPage");
+		String password=ExcelUtility.readStringData(1, 1, "LoginPage");
+		LoginPage login = new LoginPage(driver);
+		login.enterUsernameOnUsernameField(username);
+		login.enterPasswordOnPasswordField(password);
+		login.clickOnCheckbox();
+		login.clickOnSignInButton();
+		
 		driver.findElement(By.xpath("//p[text()='Sub Category']")).click();
 		
 		driver.findElement(By.xpath("//a[text()=' New']")).click();
@@ -35,22 +44,32 @@ public class SubCategoryTest extends Base
 	}
 	
 	@Test
-	public void refreshPageUsingResetButton()
+	public void refreshPageUsingResetButton() throws IOException
 	{
-		driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("admin");
-		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin");
-		driver.findElement(By.xpath("//button[text()='Sign In']")).click();
+		String username=ExcelUtility.readStringData(1, 0, "LoginPage");
+		String password=ExcelUtility.readStringData(1, 1, "LoginPage");
+		LoginPage login = new LoginPage(driver);
+		login.enterUsernameOnUsernameField(username);
+		login.enterPasswordOnPasswordField(password);
+		login.clickOnCheckbox();
+		login.clickOnSignInButton();
+		
 		driver.findElement(By.xpath("//p[text()='Sub Category']")).click();
 		
 		driver.findElement(By.xpath("//a[text()=' Reset']")).click();
 	}
 	
 	@Test
-	public void searchItemsInTheSubCategoryList()
+	public void searchItemsInTheSubCategoryList() throws IOException
 	{
-		driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("admin");
-		driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys("admin");
-		driver.findElement(By.xpath("//button[text()='Sign In']")).click();
+		String username=ExcelUtility.readStringData(1, 0, "LoginPage");
+		String password=ExcelUtility.readStringData(1, 1, "LoginPage");
+		LoginPage login = new LoginPage(driver);
+		login.enterUsernameOnUsernameField(username);
+		login.enterPasswordOnPasswordField(password);
+		login.clickOnCheckbox();
+		login.clickOnSignInButton();
+		
 		driver.findElement(By.xpath("//p[text()='Sub Category']")).click();
 		
 		driver.findElement(By.xpath("//a[text()=' Search']")).click();

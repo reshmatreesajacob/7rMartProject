@@ -1,5 +1,7 @@
 package testScript;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
@@ -7,41 +9,41 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
+import pages.LoginPage;
+import pages.ManageNewsPage;
+import utilities.ExcelUtility;
 
 public class ManageNewsTest extends Base
 { 
 	@Test
-	public void createNewNewsInManageNews() 
+	public void createNewNewsInManageNews() throws IOException 
 	{
-		WebElement username=driver.findElement(By.xpath("//input[@placeholder='Username']"));
-		username.sendKeys("admin");
-		WebElement password=driver.findElement(By.xpath("//input[@placeholder='Password']"));
-		password.sendKeys("admin");
-		WebElement signIn=driver.findElement(By.xpath("//button[text()='Sign In']"));
-		signIn.click();
+		String username=ExcelUtility.readStringData(1, 0, "LoginPage");
+		String password=ExcelUtility.readStringData(1, 1, "LoginPage");
+		LoginPage login = new LoginPage(driver);
+		login.enterUsernameOnUsernameField(username);
+		login.enterPasswordOnPasswordField(password);
+		login.clickOnCheckbox();
+		login.clickOnSignInButton();
 		
-		WebElement adminUser=driver.findElement(By.xpath("//p[text()='Admin Users']"));
-		adminUser.click();
-		WebElement managenews=driver.findElement(By.xpath("//p[text()='Manage News']"));
-		managenews.click();
-
-		WebElement create=driver.findElement(By.xpath("//a[text()=' New']"));
-		create.click();
-		WebElement text=driver.findElement(By.xpath("//textarea[@id='news']"));
-		text.sendKeys("25% Discount on all garments");
-		WebElement save=driver.findElement(By.xpath("//button[@name='create']"));
-		save.click();
+		ManageNewsPage manage=new ManageNewsPage(driver);
+		manage.clickOnManageNewsButton();
+		manage.clickOnNewButtonOfManageNewsPage();
+		String news=ExcelUtility.readStringData(1, 0, "ManageNewsPage");
+		manage.enterNewNewsOnNewsField(news);
+		manage.clickOnSaveButtonOfNewNewsCreationpage();
 	}
 	
 	@Test
-	public void searchNewsInManageNews()
+	public void searchNewsInManageNews() throws IOException
 	{
-		WebElement username=driver.findElement(By.xpath("//input[@placeholder='Username']"));
-		username.sendKeys("admin");
-		WebElement password=driver.findElement(By.xpath("//input[@placeholder='Password']"));
-		password.sendKeys("admin");
-		WebElement signIn=driver.findElement(By.xpath("//button[text()='Sign In']"));
-		signIn.click();
+		String username=ExcelUtility.readStringData(1, 0, "LoginPage");
+		String password=ExcelUtility.readStringData(1, 1, "LoginPage");
+		LoginPage login = new LoginPage(driver);
+		login.enterUsernameOnUsernameField(username);
+		login.enterPasswordOnPasswordField(password);
+		login.clickOnCheckbox();
+		login.clickOnSignInButton();
 		
 		WebElement adminUser=driver.findElement(By.xpath("//p[text()='Admin Users']"));
 		adminUser.click();
@@ -54,14 +56,15 @@ public class ManageNewsTest extends Base
 	}
 	
 	@Test
-	public void refreshPageUsingTheResetButton()
+	public void refreshPageUsingTheResetButton() throws IOException
 	{
-		WebElement username=driver.findElement(By.xpath("//input[@placeholder='Username']"));
-		username.sendKeys("admin");
-		WebElement password=driver.findElement(By.xpath("//input[@placeholder='Password']"));
-		password.sendKeys("admin");
-		WebElement signIn=driver.findElement(By.xpath("//button[text()='Sign In']"));
-		signIn.click();
+		String username=ExcelUtility.readStringData(1, 0, "LoginPage");
+		String password=ExcelUtility.readStringData(1, 1, "LoginPage");
+		LoginPage login = new LoginPage(driver);
+		login.enterUsernameOnUsernameField(username);
+		login.enterPasswordOnPasswordField(password);
+		login.clickOnCheckbox();
+		login.clickOnSignInButton();
 		
 		WebElement adminUser=driver.findElement(By.xpath("//p[text()='Admin Users']"));
 		adminUser.click();
