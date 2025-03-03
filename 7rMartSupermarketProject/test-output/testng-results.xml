@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-28T14:18:06 IST" name="Default suite" finished-at="2025-02-28T14:18:12 IST" duration-ms="6335">
+  <suite started-at="2025-03-03T13:21:14 IST" name="Default suite" finished-at="2025-03-03T13:21:19 IST" duration-ms="4736">
     <groups>
     </groups>
-    <test started-at="2025-02-28T14:18:06 IST" name="Default test" finished-at="2025-02-28T14:18:12 IST" duration-ms="6335">
-      <class name="testScript.ManageNewsTest">
-        <test-method is-config="true" signature="intializeBrowser()[pri:0, instance:testScript.ManageNewsTest@f78a47e]" started-at="2025-02-28T14:18:06 IST" name="intializeBrowser" finished-at="2025-02-28T14:18:09 IST" duration-ms="3436" status="PASS">
+    <test started-at="2025-03-03T13:21:14 IST" name="Default test" finished-at="2025-03-03T13:21:19 IST" duration-ms="4736">
+      <class name="testScript.SubCategoryTest">
+        <test-method is-config="true" signature="intializeBrowser()[pri:0, instance:testScript.SubCategoryTest@f78a47e]" started-at="2025-03-03T13:21:14 IST" name="intializeBrowser" finished-at="2025-03-03T13:21:17 IST" duration-ms="2242" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intializeBrowser -->
-        <test-method signature="createNewNewsInManageNews()[pri:0, instance:testScript.ManageNewsTest@f78a47e]" started-at="2025-02-28T14:18:09 IST" name="createNewNewsInManageNews" finished-at="2025-02-28T14:18:12 IST" duration-ms="2656" status="PASS">
+        <test-method signature="addNewItemToSubCategoryList()[pri:0, instance:testScript.SubCategoryTest@f78a47e]" started-at="2025-03-03T13:21:17 IST" name="addNewItemToSubCategoryList" finished-at="2025-03-03T13:21:19 IST" duration-ms="2451" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createNewNewsInManageNews -->
-        <test-method is-config="true" signature="diverquit()[pri:0, instance:testScript.ManageNewsTest@f78a47e]" started-at="2025-02-28T14:18:12 IST" name="diverquit" finished-at="2025-02-28T14:18:12 IST" duration-ms="195" status="PASS">
+        </test-method> <!-- addNewItemToSubCategoryList -->
+        <test-method is-config="true" signature="diverquit()[pri:0, instance:testScript.SubCategoryTest@f78a47e]" started-at="2025-03-03T13:21:19 IST" name="diverquit" finished-at="2025-03-03T13:21:19 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- diverquit -->
-      </class> <!-- testScript.ManageNewsTest -->
+      </class> <!-- testScript.SubCategoryTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
