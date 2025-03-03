@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import automationCore.Base;
 import pages.LoginPage;
+import pages.SubCategoryPage;
 import utilities.ExcelUtility;
 
 public class SubCategoryTest extends Base
@@ -27,20 +28,17 @@ public class SubCategoryTest extends Base
 		login.clickOnCheckbox();
 		login.clickOnSignInButton();
 		
-		driver.findElement(By.xpath("//p[text()='Sub Category']")).click();
+		SubCategoryPage subcategory=new SubCategoryPage(driver);
+		subcategory.clickOnSubCategoryButton();
 		
-		driver.findElement(By.xpath("//a[text()=' New']")).click();
-		WebElement category=driver.findElement(By.xpath("//select[@id='cat_id']"));
-		Select select=new Select(category);
-		select.selectByContainsVisibleText("Toys");
-
-		driver.findElement(By.xpath("//input[@id='subcategory']")).sendKeys("Sports Toy Car");
-		
-		driver.findElement(By.xpath("//input[@id='main_img']"))
-			  .sendKeys("C:\\Users\\RESHMA\\git\\7rmart_Supermarket_Project\\7rMartSupermarketProject\\src\\test\\resources\\sports Toy car.jpg");
-		
-		driver.findElement(By.xpath("//button[@name='create']")).click();
-		
+		subcategory.clickOnNewButtonOfSubCategoryPage();
+		String category=ExcelUtility.readStringData(1, 0, "SubCategoryPage");
+		subcategory.selectCategoryFromSubCategoryCreationPage(category);
+		String subCategory=ExcelUtility.readStringData(1, 1, "SubCategoryPage");
+		subcategory.enterSubCategoryOfSubCategoryCreationPage(subCategory);
+		String image=ExcelUtility.readStringData(1, 2, "SubCategoryPage");
+		subcategory.selectImageOfSubCategoryCreationPage(image);
+		subcategory.clickOnSaveButtonOfSubCategoryCreationPage();
 	}
 	
 	@Test
@@ -54,9 +52,10 @@ public class SubCategoryTest extends Base
 		login.clickOnCheckbox();
 		login.clickOnSignInButton();
 		
-		driver.findElement(By.xpath("//p[text()='Sub Category']")).click();
+		SubCategoryPage subcategory=new SubCategoryPage(driver);
+		subcategory.clickOnSubCategoryButton();
 		
-		driver.findElement(By.xpath("//a[text()=' Reset']")).click();
+		subcategory.clickOnResetButtonOfSubCategoryPage();
 	}
 	
 	@Test
@@ -70,16 +69,15 @@ public class SubCategoryTest extends Base
 		login.clickOnCheckbox();
 		login.clickOnSignInButton();
 		
-		driver.findElement(By.xpath("//p[text()='Sub Category']")).click();
+		SubCategoryPage subcategory=new SubCategoryPage(driver);
+		subcategory.clickOnSubCategoryButton();
 		
-		driver.findElement(By.xpath("//a[text()=' Search']")).click();
-		WebElement category=driver.findElement(By.xpath("//select[@id='un']"));
-		Select select=new Select(category);
-		select.selectByContainsVisibleText("Toys");
-		
-		driver.findElement(By.xpath("//input[@name='ut']")).sendKeys("Sports");
-		
-		driver.findElement(By.xpath("//button[@name='Search']")).click();
+		subcategory.clickOnSearchButtonOfSubCategoryPage();
+		String category=ExcelUtility.readStringData(1, 0, "SubCategoryPage");
+		subcategory.selectCategoryFromSubCategorySearchPage(category);
+		String subCategory=ExcelUtility.readStringData(1, 0, "SubCategoryPage");
+		subcategory.enterSubCategoryOfSubCategorySearchPage(subCategory);
+		subcategory.clickOnSearchButtonOfSubCategorySearchPage();
 	}
 
 }

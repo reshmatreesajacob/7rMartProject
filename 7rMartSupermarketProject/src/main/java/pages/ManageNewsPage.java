@@ -7,44 +7,63 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ManageNewsPage {
-	
+
 	public WebDriver driver;
-	
-	public ManageNewsPage(WebDriver driver)
-	{
-		this.driver=driver;
+
+	public ManageNewsPage(WebDriver driver) {
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
+
 //	@FindBy (xpath = "//p[text()='Admin Users']" )
 //	private WebElement adminUser;
-	@FindBy (xpath = "//p[text()='Manage News']")
+	@FindBy(xpath = "//p[text()='Manage News']")
 	private WebElement manageNews;
-	@FindBy (xpath = "//a[text()=' New']")
+	@FindBy(xpath = "//a[text()=' New']")
 	private WebElement newButton;
-	@FindBy (xpath = "//textarea[@id='news']")
+	@FindBy(xpath = "//textarea[@id='news']")
 	private WebElement news;
-	@FindBy (xpath = "//button[@name='create']")
+	@FindBy(xpath = "//button[@name='create']")
 	private WebElement saveButton;
-	
-	public void clickOnManageNewsButton()
-	{
+	@FindBy(xpath = "//a[text()=' Reset']")
+	private WebElement resetButton;
+	@FindBy(xpath = "//a[contains(text(),'Search')]")
+	private WebElement searchButton;
+	@FindBy(xpath = "//input[@name='un']")
+	private WebElement searchNews;
+	@FindBy(xpath = "//button[@name='Search']")
+	private WebElement searchButtonOnSearchPage;
+
+	public void clickOnManageNewsButton() {
 		manageNews.click();
 	}
-	
-	public void clickOnNewButtonOfManageNewsPage()
-	{
+
+	public void clickOnNewButtonOfManageNewsPage() {
 		newButton.click();
 	}
-	
-	public void enterNewNewsOnNewsField(String news)
-	{
+
+	public void enterNewNewsOnNewsField(String news) {
 		this.news.sendKeys(news);
 	}
-	
-	public void clickOnSaveButtonOfNewNewsCreationpage()
-	{
+
+	public void clickOnSaveButtonOfNewNewsCreationpage() {
 		saveButton.click();
 	}
-	
+
+	public void clickOnResetButtonOfManageNewsPage() {
+		resetButton.click();
+	}
+
+	public void clickOnSearchButtonOfManageNewsPage() {
+		searchButton.click();
+	}
+
+	public void enterSearchNewsOnSearchNewsField(String news) {
+		searchNews.sendKeys(news);
+	}
+
+	public void clickOnSearchButtonOfSearchNewsPage() {
+		searchButtonOnSearchPage.click();
+	}
+
 }
