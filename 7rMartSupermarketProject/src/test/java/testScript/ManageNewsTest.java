@@ -36,6 +36,7 @@ public class ManageNewsTest extends Base {
 		Assert.assertEquals(actualResult,expectedResult,"User was unable to create new news!");
 	}
 
+	
 	@Test
 	public void searchNewsInManageNews() throws IOException {
 		String username = ExcelUtility.readStringData(1, 0, "LoginPage");

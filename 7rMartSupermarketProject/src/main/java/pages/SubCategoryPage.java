@@ -84,5 +84,4 @@ public class SubCategoryPage {
 	public void clickOnSearchButtonOfSubCategorySearchPage() {
 		searchButtonOnSearchPage.click();
 	}
-
 }

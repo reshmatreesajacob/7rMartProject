@@ -30,6 +30,7 @@ public class LoginPage {
 	@FindBy (xpath = "//b[text()='7rmart supermarket']")
 	private WebElement title;
 
+	
 	public void enterUsernameOnUsernameField(String username) {
 		usernameField.sendKeys(username);
 	}

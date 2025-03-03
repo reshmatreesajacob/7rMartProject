@@ -15,6 +15,7 @@ import utilities.ExcelUtility;
 
 public class HomeTest extends Base {
 
+	
 	@Test(description = "Verification of user can use the Logout functionality ")
 	public void verifySuccessfullUserLogoutFromHomePageAfterLogin() throws IOException {
 

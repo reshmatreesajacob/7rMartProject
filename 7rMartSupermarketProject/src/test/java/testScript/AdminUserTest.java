@@ -56,6 +56,7 @@ public class AdminUserTest extends Base {
 		admin.clickOnResetButton();
 	}
 
+	
 	@Test
 	public void verifyUserIsAbleToSearchNewlyAddedUsersInTheNewlyAddedUsersList() throws IOException {
 		String username = ExcelUtility.readStringData(1, 0, "LoginPage");

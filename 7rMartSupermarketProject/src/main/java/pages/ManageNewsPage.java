@@ -42,6 +42,7 @@ public class ManageNewsPage {
 		newButton.click();
 	}
 
+	
 	public void enterNewNewsOnNewsField(String news) {
 		this.news.sendKeys(news);
 	}

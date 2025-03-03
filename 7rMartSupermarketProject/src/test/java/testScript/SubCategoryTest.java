@@ -58,6 +58,7 @@ public class SubCategoryTest extends Base
 		subcategory.clickOnResetButtonOfSubCategoryPage();
 	}
 	
+	
 	@Test
 	public void searchItemsInTheSubCategoryList() throws IOException
 	{
