@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
@@ -21,6 +22,9 @@ public class LoginTest extends Base {
 		login.enterPasswordOnPasswordField(password);
 		login.clickOnCheckbox();
 		login.clickOnSignInButton();
+		boolean isDashboardDisplayed= login.isDashboardDisplayed();
+		Assert.assertTrue(isDashboardDisplayed, "User is unable to login with valid credentials");
+	
 	}
 
 	@Test(priority = 2, description = "Verification of user login with valid username and invalid password")
@@ -33,6 +37,9 @@ public class LoginTest extends Base {
 		login.enterPasswordOnPasswordField(password);
 		login.clickOnCheckbox();
 		login.clickOnSignInButton();
+		boolean isTitleDisplayed=login.isTitleDisplayed();
+		Assert.assertTrue(isTitleDisplayed, "User login successfull with invalid password");
+		
 	}
 
 	@Test(priority = 3, description = "Verification of user login with invalid username and valid password")
