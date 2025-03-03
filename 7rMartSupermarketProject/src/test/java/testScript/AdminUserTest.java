@@ -16,7 +16,7 @@ import utilities.ExcelUtility;
 
 public class AdminUserTest extends Base {
 	@Test
-	public void addNewUserToUsersList() throws IOException {
+	public void verifyWhetherUserIsAbleToAddNewUserToTheUsersList() throws IOException {
 		String username = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(1, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
@@ -40,7 +40,7 @@ public class AdminUserTest extends Base {
 	}
 
 	@Test
-	public void refreshPageUsingResetButton() throws IOException {
+	public void verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton() throws IOException {
 		String username = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(1, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
@@ -56,8 +56,9 @@ public class AdminUserTest extends Base {
 		admin.clickOnResetButton();
 	}
 
+	
 	@Test
-	public void searchUsersInTheUsersList() throws IOException {
+	public void verifyUserIsAbleToSearchNewlyAddedUsersInTheNewlyAddedUsersList() throws IOException {
 		String username = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(1, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);

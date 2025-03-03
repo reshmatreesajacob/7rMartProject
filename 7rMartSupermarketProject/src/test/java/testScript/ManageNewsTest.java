@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -30,8 +31,12 @@ public class ManageNewsTest extends Base {
 		String news = ExcelUtility.readStringData(1, 0, "ManageNewsPage");
 		manage.enterNewNewsOnNewsField(news);
 		manage.clickOnSaveButtonOfNewNewsCreationpage();
+		String expectedResult="Alert!";
+		String actualResult=manage.getTextFromAlert();
+		Assert.assertEquals(actualResult,expectedResult,"User was unable to create new news!");
 	}
 
+	
 	@Test
 	public void searchNewsInManageNews() throws IOException {
 		String username = ExcelUtility.readStringData(1, 0, "LoginPage");
