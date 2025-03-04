@@ -20,7 +20,7 @@ public class Base {
 	@AfterMethod
 	public void diverquit() {
 		// driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(2));
-		//driver.quit();
+		driver.quit();
 	}
 
 }

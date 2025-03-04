@@ -31,8 +31,12 @@ public class ManageNewsPage {
 	private WebElement searchNews;
 	@FindBy(xpath = "//button[@name='Search']")
 	private WebElement searchButtonOnSearchPage;
-	@FindBy (xpath = "//h5[text()=' Alert!']")
+	@FindBy(xpath = "//h5[text()=' Alert!']")
 	private WebElement newNewsAlert;
+	@FindBy(xpath = "//h4[text()='Manage News']")
+	private WebElement refreshNewsDisplayed;
+	@FindBy(xpath = "//td[text()='OFFERR!! OFFERR!!']")
+	private WebElement searchNewsIsDisplayed;
 
 	public void clickOnManageNewsButton() {
 		manageNews.click();
@@ -42,7 +46,6 @@ public class ManageNewsPage {
 		newButton.click();
 	}
 
-	
 	public void enterNewNewsOnNewsField(String news) {
 		this.news.sendKeys(news);
 	}
@@ -66,10 +69,17 @@ public class ManageNewsPage {
 	public void clickOnSearchButtonOfSearchNewsPage() {
 		searchButtonOnSearchPage.click();
 	}
-	
-	public String getTextFromAlert()
-	{
+
+	public String getTextFromAlert() {
 		return newNewsAlert.getText();
+	}
+
+	public String getTextFromRefreshNewsDisplayed() {
+		return refreshNewsDisplayed.getText();
+	}
+
+	public boolean isSearchNewsIsDisplayed() {
+		return searchNewsIsDisplayed.isDisplayed();
 	}
 
 }

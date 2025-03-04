@@ -39,6 +39,13 @@ public class SubCategoryPage {
 	@FindBy(xpath = "//button[@name='Search']")
 	private WebElement searchButtonOnSearchPage;
 
+	@FindBy(xpath = "//h5 [text()=' Alert!']")
+	private WebElement newSubCategoryAlert;
+	@FindBy(xpath = "//h4[text()='List Sub Categories']")
+	private WebElement refreshSubCategoryDisplayed;
+	@FindBy(xpath = "//td[text()='Sports Toy Car2']")
+	private WebElement searchSubcategoryIsDisplayed;
+
 	public void clickOnSubCategoryButton() {
 		subCategory.click();
 	}
@@ -83,5 +90,17 @@ public class SubCategoryPage {
 
 	public void clickOnSearchButtonOfSubCategorySearchPage() {
 		searchButtonOnSearchPage.click();
+	}
+
+	public String getTextFromAlert() {
+		return newSubCategoryAlert.getText();
+	}
+
+	public String getTextFromRefreshNewsDisplayed() {
+		return refreshSubCategoryDisplayed.getText();
+	}
+
+	public boolean isSearchSubcategoryIsDisplayed() {
+		return searchSubcategoryIsDisplayed.isDisplayed();
 	}
 }

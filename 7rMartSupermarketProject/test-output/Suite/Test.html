@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>13/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/5/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Feb 27 11:59:47 IST 2025</td>
+<td>Started on:</td><td>Tue Mar 04 15:31:19 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>43 seconds (43530 ms)</td>
+<tr><td>Total time:</td><td>54 seconds (54100 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,16 +76,58 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testScript.SubCategoryTest.addNewItemToSubCategoryList()'><b>addNewItemToSubCategoryList</b><br>Test class: testScript.SubCategoryTest</td>
-<td><div><pre>org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : C:\Users\RESHMA\git\7rmart_Supermarket_Project\7rMartProject\src\test\resources\sports Toy car.jpg
-  (Session info: chrome=133.0.6943.127)
+<td title='testScript.SubCategoryTest.verifyWhetherUserIsAbleToaddNewItemToSubCategoryList()'><b>verifyWhetherUserIsAbleToaddNewItemToSubCategoryList</b><br>Test class: testScript.SubCategoryTest<br>Test method: Verify whether the user can add new item in the Sub category list using New Button</td>
+<td><div><pre>java.lang.AssertionError: User was unable to create new item in the Sub Category list! expected [List Sub Categories] but found [Alert!]
+	at testScript.SubCategoryTest.verifyWhetherUserIsAbleToaddNewItemToSubCategoryList(SubCategoryTest.java:45)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace797539755", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace797539755'><pre>java.lang.AssertionError: User was unable to create new item in the Sub Category list! expected [List Sub Categories] but found [Alert!]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at testScript.SubCategoryTest.verifyWhetherUserIsAbleToaddNewItemToSubCategoryList(SubCategoryTest.java:45)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>2</td>
+<td>testScript.SubCategoryTest@72035809</td></tr>
+<tr>
+<td title='testScript.SubCategoryTest.verifyWhetherUserIsAbleTosearchItemsInTheSubCategoryList()'><b>verifyWhetherUserIsAbleTosearchItemsInTheSubCategoryList</b><br>Test class: testScript.SubCategoryTest<br>Test method: Verify whether the user can search a item in the Sub Category list using Search Button</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[text()=&apos;Sportscar&apos;]&quot;}
+  (Session info: chrome=133.0.6943.142)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [804cbceb5e6cb5866f8e1abe4e6a4092, sendKeysToElement {value=[Ljava.lang.CharSequence;@5177e388, id=f.A6A41392DE476B75B0193C8E11F4DD2E.d.C05DFC6FF2EEF266F2A24F608AFDDC47.e.177}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.127, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\RESHMA\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49890}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49890/devtoo..., se:cdpVersion: 133.0.6943.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (804cbceb5e6cb5866f8e1abe4e6a4092)] -&gt; xpath: //input[@id=&apos;main_img&apos;]]
-Session ID: 804cbceb5e6cb5866f8e1abe4e6a4092
+Command: [f0f17be3aa726aa631bb9cdd117c55b1, findElement {value=//td[text()=&apos;Sportscar&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\RESHMA\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54332}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54332/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f0f17be3aa726aa631bb9cdd117c55b1
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -93,20 +135,26 @@ Session ID: 804cbceb5e6cb5866f8e1abe4e6a4092
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-	at testScript.SubCategoryTest.addNewItemToSubCategoryList(SubCategoryTest.java:31)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at pages.SubCategoryPage.isSearchSubcategoryIsDisplayed(SubCategoryPage.java:108)
+	at testScript.SubCategoryTest.verifyWhetherUserIsAbleTosearchItemsInTheSubCategoryList(SubCategoryTest.java:88)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1318209130", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1318209130'><pre>org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : C:\Users\RESHMA\git\7rmart_Supermarket_Project\7rMartProject\src\test\resources\sports Toy car.jpg
-  (Session info: chrome=133.0.6943.127)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1939282277", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1939282277'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[text()=&apos;Sportscar&apos;]&quot;}
+  (Session info: chrome=133.0.6943.142)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [804cbceb5e6cb5866f8e1abe4e6a4092, sendKeysToElement {value=[Ljava.lang.CharSequence;@5177e388, id=f.A6A41392DE476B75B0193C8E11F4DD2E.d.C05DFC6FF2EEF266F2A24F608AFDDC47.e.177}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.127, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\RESHMA\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49890}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49890/devtoo..., se:cdpVersion: 133.0.6943.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (804cbceb5e6cb5866f8e1abe4e6a4092)] -&gt; xpath: //input[@id=&apos;main_img&apos;]]
-Session ID: 804cbceb5e6cb5866f8e1abe4e6a4092
+Command: [f0f17be3aa726aa631bb9cdd117c55b1, findElement {value=//td[text()=&apos;Sportscar&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\RESHMA\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54332}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54332/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f0f17be3aa726aa631bb9cdd117c55b1
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -117,9 +165,15 @@ Session ID: 804cbceb5e6cb5866f8e1abe4e6a4092
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-	at testScript.SubCategoryTest.addNewItemToSubCategoryList(SubCategoryTest.java:31)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at pages.SubCategoryPage.isSearchSubcategoryIsDisplayed(SubCategoryPage.java:108)
+	at testScript.SubCategoryTest.verifyWhetherUserIsAbleTosearchItemsInTheSubCategoryList(SubCategoryTest.java:88)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -148,7 +202,177 @@ Session ID: 804cbceb5e6cb5866f8e1abe4e6a4092
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>1</td>
-<td>testScript.SubCategoryTest@68c9133c</td></tr>
+<td>testScript.SubCategoryTest@72035809</td></tr>
+<tr>
+<td title='testScript.AdminUserTest.verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton()'><b>verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton</b><br>Test class: testScript.AdminUserTest</td>
+<td><div><pre>java.lang.AssertionError: User was unable to refresh the users list! expected [List Sub Categories] but found [Admin Users]
+	at testScript.AdminUserTest.verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton(AdminUserTest.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1829313709", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1829313709'><pre>java.lang.AssertionError: User was unable to refresh the users list! expected [List Sub Categories] but found [Admin Users]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at testScript.AdminUserTest.verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton(AdminUserTest.java:66)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>1</td>
+<td>testScript.AdminUserTest@2cb4893b</td></tr>
+<tr>
+<td title='testScript.AdminUserTest.verifyWhetherUserIsAbleToAddNewUserToTheUsersList()'><b>verifyWhetherUserIsAbleToAddNewUserToTheUsersList</b><br>Test class: testScript.AdminUserTest</td>
+<td><div><pre>java.lang.AssertionError: User was unable to add new users! expected [List Sub Categories] but found [Alert!]
+	at testScript.AdminUserTest.verifyWhetherUserIsAbleToAddNewUserToTheUsersList(AdminUserTest.java:45)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1000419469", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1000419469'><pre>java.lang.AssertionError: User was unable to add new users! expected [List Sub Categories] but found [Alert!]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at testScript.AdminUserTest.verifyWhetherUserIsAbleToAddNewUserToTheUsersList(AdminUserTest.java:45)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>2</td>
+<td>testScript.AdminUserTest@2cb4893b</td></tr>
+<tr>
+<td title='testScript.HomeTest.verifySuccessfullUserLogoutFromHomePageAfterLogin()'><b>verifySuccessfullUserLogoutFromHomePageAfterLogin</b><br>Test class: testScript.HomeTest<br>Test method: Verification of whether the user is able to use the Logout functionality after LogIn</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h5[contains(text(),&apos; Alert!&apos;)]&quot;}
+  (Session info: chrome=133.0.6943.142)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [29800dd1d8b0d01cc2b820a60275fd32, findElement {value=//h5[contains(text(),&apos; Alert!&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\RESHMA\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54199}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54199/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 29800dd1d8b0d01cc2b820a60275fd32
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at pages.HomePage.isAlertMessageDisplayed(HomePage.java:38)
+	at testScript.HomeTest.verifySuccessfullUserLogoutFromHomePageAfterLogin(HomeTest.java:35)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1053856141", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1053856141'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h5[contains(text(),&apos; Alert!&apos;)]&quot;}
+  (Session info: chrome=133.0.6943.142)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [29800dd1d8b0d01cc2b820a60275fd32, findElement {value=//h5[contains(text(),&apos; Alert!&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.142, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\RESHMA\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54199}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54199/devtoo..., se:cdpVersion: 133.0.6943.142, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 29800dd1d8b0d01cc2b820a60275fd32
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy12.isDisplayed(Unknown Source)
+	at pages.HomePage.isAlertMessageDisplayed(HomePage.java:38)
+	at testScript.HomeTest.verifySuccessfullUserLogoutFromHomePageAfterLogin(HomeTest.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>1</td>
+<td>testScript.HomeTest@1ed4ae0f</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -159,70 +383,50 @@ Session ID: 804cbceb5e6cb5866f8e1abe4e6a4092
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testScript.SubCategoryTest.refreshPageUsingResetButton()'><b>refreshPageUsingResetButton</b><br>Test class: testScript.SubCategoryTest</td>
+<td title='testScript.ManageNewsTest.verifyWhetherUserIsAbleToRefreshNewsPageUsingTheResetButton()'><b>verifyWhetherUserIsAbleToRefreshNewsPageUsingTheResetButton</b><br>Test class: testScript.ManageNewsTest<br>Test method: Verify whether the user can refresh the News list using Reset Button</td>
 <td></td>
 <td>1</td>
-<td>testScript.SubCategoryTest@68c9133c</td></tr>
+<td>testScript.ManageNewsTest@5afa3c9</td></tr>
 <tr>
-<td title='testScript.LoginTest.verifyUserLoginWithInvalidUsernameAndValidPassword()'><b>verifyUserLoginWithInvalidUsernameAndValidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with invalid username and valid password</td>
-<td></td>
-<td>0</td>
-<td>testScript.LoginTest@5e2c3d18</td></tr>
-<tr>
-<td title='testScript.ManageNewsTest.searchNewsInManageNews()'><b>searchNewsInManageNews</b><br>Test class: testScript.ManageNewsTest</td>
+<td title='testScript.SubCategoryTest.verifyWhetherUserIsAbleTorefreshPageUsingResetButton()'><b>verifyWhetherUserIsAbleTorefreshPageUsingResetButton</b><br>Test class: testScript.SubCategoryTest<br>Test method: Verify whether the user can refresh the Sub Category list using Reset Button</td>
 <td></td>
 <td>1</td>
-<td>testScript.ManageNewsTest@48075da3</td></tr>
+<td>testScript.SubCategoryTest@72035809</td></tr>
 <tr>
 <td title='testScript.LoginTest.verifyUserLoginWithValidUsernameAndInvalidPassword()'><b>verifyUserLoginWithValidUsernameAndInvalidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with valid username and invalid password</td>
 <td></td>
 <td>0</td>
-<td>testScript.LoginTest@5e2c3d18</td></tr>
-<tr>
-<td title='testScript.AdminUserTest.refreshPageUsingResetButton()'><b>refreshPageUsingResetButton</b><br>Test class: testScript.AdminUserTest</td>
-<td></td>
-<td>1</td>
-<td>testScript.AdminUserTest@7a35b0f5</td></tr>
-<tr>
-<td title='testScript.AdminUserTest.addNewUserToUsersList()'><b>addNewUserToUsersList</b><br>Test class: testScript.AdminUserTest</td>
-<td></td>
-<td>1</td>
-<td>testScript.AdminUserTest@7a35b0f5</td></tr>
-<tr>
-<td title='testScript.SubCategoryTest.searchItemsInTheSubCategoryList()'><b>searchItemsInTheSubCategoryList</b><br>Test class: testScript.SubCategoryTest</td>
-<td></td>
-<td>1</td>
-<td>testScript.SubCategoryTest@68c9133c</td></tr>
-<tr>
-<td title='testScript.ManageNewsTest.refreshPageUsingTheResetButton()'><b>refreshPageUsingTheResetButton</b><br>Test class: testScript.ManageNewsTest</td>
-<td></td>
-<td>3</td>
-<td>testScript.ManageNewsTest@48075da3</td></tr>
+<td>testScript.LoginTest@cc43f62</td></tr>
 <tr>
 <td title='testScript.LoginTest.verifyUserLoginWithValidUsernameAndValidPassword()'><b>verifyUserLoginWithValidUsernameAndValidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with valid Credentials</td>
 <td></td>
 <td>0</td>
-<td>testScript.LoginTest@5e2c3d18</td></tr>
+<td>testScript.LoginTest@cc43f62</td></tr>
+<tr>
+<td title='testScript.ManageNewsTest.verifyWhetherUserIsAbleTosearchNewsInManageNews()'><b>verifyWhetherUserIsAbleTosearchNewsInManageNews</b><br>Test class: testScript.ManageNewsTest<br>Test method: Verify whether the user can search a news in the News list using Search Button</td>
+<td></td>
+<td>1</td>
+<td>testScript.ManageNewsTest@5afa3c9</td></tr>
+<tr>
+<td title='testScript.ManageNewsTest.verifyWhetherUserIsAbleToAddNewNewsInManageNews()'><b>verifyWhetherUserIsAbleToAddNewNewsInManageNews</b><br>Test class: testScript.ManageNewsTest<br>Test method: Verify whether the user can add new news in the News list using New Button</td>
+<td></td>
+<td>2</td>
+<td>testScript.ManageNewsTest@5afa3c9</td></tr>
 <tr>
 <td title='testScript.LoginTest.verifyUserLoginWithInvalidUsernameAndInvalidPassword()'><b>verifyUserLoginWithInvalidUsernameAndInvalidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with invalid username and invalid password</td>
 <td></td>
 <td>0</td>
-<td>testScript.LoginTest@5e2c3d18</td></tr>
+<td>testScript.LoginTest@cc43f62</td></tr>
 <tr>
-<td title='testScript.AdminUserTest.searchUsersInTheUsersList()'><b>searchUsersInTheUsersList</b><br>Test class: testScript.AdminUserTest</td>
-<td></td>
-<td>1</td>
-<td>testScript.AdminUserTest@7a35b0f5</td></tr>
-<tr>
-<td title='testScript.HomeTest.verifyUserLogoutFromPage()'><b>verifyUserLogoutFromPage</b><br>Test class: testScript.HomeTest<br>Test method: Verification of user can use the Logout functionality </td>
+<td title='testScript.LoginTest.verifyUserLoginWithInvalidUsernameAndValidPassword()'><b>verifyUserLoginWithInvalidUsernameAndValidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with invalid username and valid password</td>
 <td></td>
 <td>0</td>
-<td>testScript.HomeTest@644baf4a</td></tr>
+<td>testScript.LoginTest@cc43f62</td></tr>
 <tr>
-<td title='testScript.ManageNewsTest.createNewNewsInManageNews()'><b>createNewNewsInManageNews</b><br>Test class: testScript.ManageNewsTest</td>
+<td title='testScript.AdminUserTest.verifyUserIsAbleToSearchNewlyAddedUsersInTheNewlyAddedUsersList()'><b>verifyUserIsAbleToSearchNewlyAddedUsersInTheNewlyAddedUsersList</b><br>Test class: testScript.AdminUserTest</td>
 <td></td>
-<td>1</td>
-<td>testScript.ManageNewsTest@48075da3</td></tr>
+<td>2</td>
+<td>testScript.AdminUserTest@2cb4893b</td></tr>
 </table><p>
 </body>
 </html>
