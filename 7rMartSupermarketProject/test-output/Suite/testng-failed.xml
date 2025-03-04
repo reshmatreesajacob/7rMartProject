@@ -6,10 +6,26 @@
       <class name="testScript.SubCategoryTest">
         <methods>
           <include name="diverquit"/>
-          <include name="addNewItemToSubCategoryList"/>
+          <include name="verifyWhetherUserIsAbleToaddNewItemToSubCategoryList"/>
           <include name="intializeBrowser"/>
+          <include name="verifyWhetherUserIsAbleTosearchItemsInTheSubCategoryList"/>
         </methods>
       </class> <!-- testScript.SubCategoryTest -->
+      <class name="testScript.HomeTest">
+        <methods>
+          <include name="verifySuccessfullUserLogoutFromHomePageAfterLogin"/>
+          <include name="diverquit"/>
+          <include name="intializeBrowser"/>
+        </methods>
+      </class> <!-- testScript.HomeTest -->
+      <class name="testScript.AdminUserTest">
+        <methods>
+          <include name="diverquit"/>
+          <include name="verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton"/>
+          <include name="verifyWhetherUserIsAbleToAddNewUserToTheUsersList"/>
+          <include name="intializeBrowser"/>
+        </methods>
+      </class> <!-- testScript.AdminUserTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

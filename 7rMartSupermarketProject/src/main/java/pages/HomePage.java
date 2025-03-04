@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-
 public class HomePage {
 
 	public WebDriver driver;
@@ -22,6 +21,8 @@ public class HomePage {
 	private WebElement adminDropDown;
 	@FindBy(xpath = "//i[@class='ace-icon fa fa-power-off']")
 	private WebElement logoutButton;
+	@FindBy(xpath = "//p[text()='Sign in to start your session']")
+	private WebElement signInPage;
 
 	public void clickOnAdminButton() {
 		adminDropDown.click();
@@ -29,6 +30,10 @@ public class HomePage {
 
 	public void clickOnTheLogoutButton() {
 		logoutButton.click();
+	}
+
+	public boolean isBackToLoginPage() {
+		return signInPage.isDisplayed();
 	}
 
 }

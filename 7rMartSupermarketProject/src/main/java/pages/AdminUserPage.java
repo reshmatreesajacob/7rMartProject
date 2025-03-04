@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-
 public class AdminUserPage {
 	public WebDriver driver;
 
@@ -40,6 +39,12 @@ public class AdminUserPage {
 	private WebElement searchUserType;
 	@FindBy(xpath = "//button[@name='Search']")
 	private WebElement searchButtonInSearchPage;
+	@FindBy(xpath = "//h5 [text()=' Alert!']")
+	private WebElement newUserAlert;
+	@FindBy(xpath = "//h4[text()='Admin Users']")
+	private WebElement refreshUsersIsDisplayed;
+	@FindBy(xpath = "//td[text()='movieuser']")
+	private WebElement searchUserListIsDisplayed;
 
 	public void clickOnAdminUsersButton() {
 		adminUsers.click();
@@ -89,5 +94,17 @@ public class AdminUserPage {
 
 	public void clickOnSearchButtonInSearchPage() {
 		searchButtonInSearchPage.click();
+	}
+
+	public String getTextFromAlert() {
+		return newUserAlert.getText();
+	}
+
+	public String getTextFromRefreshUserDisplayed() {
+		return refreshUsersIsDisplayed.getText();
+	}
+
+	public boolean isSearchAUserIsDisplayed() {
+		return searchUserListIsDisplayed.isDisplayed();
 	}
 }

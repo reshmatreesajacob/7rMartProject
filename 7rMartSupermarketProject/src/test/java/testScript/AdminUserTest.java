@@ -6,10 +6,12 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
+import constants.Messages;
 import pages.AdminUserPage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
@@ -37,6 +39,10 @@ public class AdminUserTest extends Base {
 		admin.enterNewPasswordOnPasswordField(newPassword);
 		admin.selectNewUserTypeOnUserTypeField(newUserType);
 		admin.clickOnSaveButton();
+
+		String expectedResult = "Alert!";
+		String actualResult = admin.getTextFromAlert();
+		Assert.assertEquals(actualResult, expectedResult, Messages.USERCREATIONERROR);
 	}
 
 	@Test
@@ -54,9 +60,12 @@ public class AdminUserTest extends Base {
 		admin.clickOnManageUsersButton();
 
 		admin.clickOnResetButton();
+
+		String expectedResult = "Admin Users";
+		String actualResult = admin.getTextFromRefreshUserDisplayed();
+		Assert.assertEquals(actualResult, expectedResult, Messages.USERREFRESHPAGEERROR);
 	}
 
-	
 	@Test
 	public void verifyUserIsAbleToSearchNewlyAddedUsersInTheNewlyAddedUsersList() throws IOException {
 		String username = ExcelUtility.readStringData(1, 0, "LoginPage");
@@ -77,6 +86,9 @@ public class AdminUserTest extends Base {
 		admin.enterUsernameOnUsernameFieldOfSearchPage(searchUsername);
 		admin.selectUserTypeOnUserTypeFieldOfSearchPage(searchUserType);
 		admin.clickOnSearchButtonInSearchPage();
+
+		boolean issearchDisplayed = admin.isSearchAUserIsDisplayed();
+		Assert.assertTrue(issearchDisplayed, Messages.USERSEARCHPAGEERROR);
 
 	}
 }

@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationCore.Base;
+import constants.Messages;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
@@ -22,9 +23,10 @@ public class LoginTest extends Base {
 		login.enterPasswordOnPasswordField(password);
 		login.clickOnCheckbox();
 		login.clickOnSignInButton();
-		boolean isDashboardDisplayed= login.isDashboardDisplayed();
-		Assert.assertTrue(isDashboardDisplayed, "User is unable to login with valid credentials");
-	
+
+		boolean isDashboardDisplayed = login.isDashboardDisplayed();
+		Assert.assertTrue(isDashboardDisplayed, Messages.VALIDCREDENTIALERROR);
+
 	}
 
 	@Test(priority = 2, description = "Verification of user login with valid username and invalid password")
@@ -37,12 +39,12 @@ public class LoginTest extends Base {
 		login.enterPasswordOnPasswordField(password);
 		login.clickOnCheckbox();
 		login.clickOnSignInButton();
-		boolean isTitleDisplayed=login.isTitleDisplayed();
-		Assert.assertTrue(isTitleDisplayed, "User login successfull with invalid password");
-		
+
+		boolean isTitleDisplayed = login.isTitleDisplayed();
+		Assert.assertTrue(isTitleDisplayed, Messages.INVALIDPASSWORDERROR);
+
 	}
 
-	
 	@Test(priority = 3, description = "Verification of user login with invalid username and valid password")
 	public void verifyUserLoginWithInvalidUsernameAndValidPassword() throws IOException {
 		String username = ExcelUtility.readStringData(3, 0, "LoginPage");
@@ -52,6 +54,9 @@ public class LoginTest extends Base {
 		login.enterPasswordOnPasswordField(password);
 		login.clickOnCheckbox();
 		login.clickOnSignInButton();
+
+		boolean isTitleDisplayed = login.isTitleDisplayed();
+		Assert.assertTrue(isTitleDisplayed, Messages.INVALIDUSERNAMEERROR);
 	}
 
 	@Test(priority = 4, description = "Verification of user login with invalid username and invalid password")
@@ -63,6 +68,9 @@ public class LoginTest extends Base {
 		login.enterPasswordOnPasswordField(password);
 		login.clickOnCheckbox();
 		login.clickOnSignInButton();
+
+		boolean isTitleDisplayed = login.isTitleDisplayed();
+		Assert.assertTrue(isTitleDisplayed, Messages.INVALIDUSERNAMENVALIDPASSWORDERROR);
 	}
 
 }

@@ -25,12 +25,12 @@ public class LoginPage {
 	private WebElement rememberMeCheckbox;
 	@FindBy(xpath = "//button[text()='Sign In']")
 	private WebElement signIn;
-	@FindBy (xpath = "//p[text()='Dashboard']")
+
+	@FindBy(xpath = "//p[text()='Dashboard']")
 	private WebElement dashboard;
-	@FindBy (xpath = "//b[text()='7rmart supermarket']")
+	@FindBy(xpath = "//b[text()='7rmart supermarket']")
 	private WebElement title;
 
-	
 	public void enterUsernameOnUsernameField(String username) {
 		usernameField.sendKeys(username);
 	}
@@ -46,14 +46,12 @@ public class LoginPage {
 	public void clickOnSignInButton() {
 		signIn.click();
 	}
-	
-	public boolean isDashboardDisplayed()
-	{
+
+	public boolean isDashboardDisplayed() {
 		return dashboard.isDisplayed();
 	}
-	
-	public boolean isTitleDisplayed()
-	{
+
+	public boolean isTitleDisplayed() {
 		return title.isDisplayed();
 	}
 }
