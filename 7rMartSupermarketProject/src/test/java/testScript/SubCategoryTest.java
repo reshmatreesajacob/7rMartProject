@@ -37,7 +37,8 @@ public class SubCategoryTest extends Base {
 		String subCategory = ExcelUtility.readStringData(1, 1, "SubCategoryPage");
 		subcategory.enterSubCategoryOfSubCategoryCreationPage(subCategory);
 		String image = ExcelUtility.readStringData(1, 2, "SubCategoryPage");
-		subcategory.selectImageOfSubCategoryCreationPage(image);
+//		subcategory.selectImageOfSubCategoryCreationPage(image);
+		subcategory.selectImageOfSubCategoryCreationPage();
 		subcategory.clickOnSaveButtonOfSubCategoryCreationPage();
 
 		String expectedResult = "Alert!";

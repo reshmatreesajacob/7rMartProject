@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import constants.Constants;
+
 public class SubCategoryPage {
 
 	public WebDriver driver;
@@ -63,8 +65,15 @@ public class SubCategoryPage {
 		subCategoryText.sendKeys(subCategory1);
 	}
 
-	public void selectImageOfSubCategoryCreationPage(String image) {
-		imageUploadButton.sendKeys(image);
+	// 2 ways -- using excel or from constants class
+	
+//	public void selectImageOfSubCategoryCreationPage(String image) {
+//		imageUploadButton.sendKeys(image);
+//	}
+
+	// CALLING USING CONSTANTS
+	public void selectImageOfSubCategoryCreationPage() {
+		imageUploadButton.sendKeys(Constants.IMAGEFILE);
 	}
 
 	public void clickOnSaveButtonOfSubCategoryCreationPage() {
