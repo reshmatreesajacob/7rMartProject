@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScript.SubCategoryTest">
+      <class name="testScript.HomeTest">
         <methods>
-          <include name="diverquit"/>
-          <include name="verifyWhetherUserIsAbleToaddNewItemToSubCategoryList"/>
+          <include name="verifySuccessfullUserLogoutFromHomePageAfterLogin"/>
+          <include name="driverQuit"/>
           <include name="intializeBrowser"/>
         </methods>
-      </class> <!-- testScript.SubCategoryTest -->
+      </class> <!-- testScript.HomeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -70,7 +70,7 @@ public class LoginTest extends Base {
 		login.clickOnSignInButton();
 
 		boolean isTitleDisplayed = login.isTitleDisplayed();
-		Assert.assertTrue(isTitleDisplayed, Messages.INVALIDUSERNAMENVALIDPASSWORDERROR);
+		Assert.assertTrue(isTitleDisplayed, Messages.INVALIDCREDENTIALERROR);
 	}
 
 }
