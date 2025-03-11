@@ -18,7 +18,7 @@ import utilities.WaitUtility;
 public class Base {
 	public WebDriver driver;
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	@Parameters("browser")
 	public void intializeBrowser(String browser) throws Exception {
 		if (browser.equalsIgnoreCase("Chrome")) {
@@ -34,7 +34,7 @@ public class Base {
 		driver.get("https://groceryapp.uniqassosiates.com/admin/login\r\n");
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	// This method handles quitting the WebDriver after the test execution
 	// It also captures a screenshot if the test fails
 	// ITestResult-->interface in TestNG that manages lifecycle of a testcase result
