@@ -15,6 +15,7 @@ import constants.Messages;
 import pages.AdminUserPage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
+import utilities.FakerUtility;
 
 public class AdminUserTest extends Base {
 	@Test
@@ -32,8 +33,12 @@ public class AdminUserTest extends Base {
 		admin.clickOnManageUsersButton();
 
 		admin.clickOnNewButton();
-		String newUsername = ExcelUtility.readStringData(2, 0, "AdminUserPage");
-		String newPassword = ExcelUtility.readStringData(2, 1, "AdminUserPage");
+//		String newUsername = ExcelUtility.readStringData(2, 0, "AdminUserPage");
+//		String newPassword = ExcelUtility.readStringData(2, 1, "AdminUserPage");
+
+		FakerUtility faker = new FakerUtility();
+		String newUsername = faker.createRandomUsername();
+		String newPassword = faker.createRandomPassword();
 		String newUserType = ExcelUtility.readStringData(2, 2, "AdminUserPage");
 		admin.enterNewUsernameOnUsernameField(newUsername);
 		admin.enterNewPasswordOnPasswordField(newPassword);

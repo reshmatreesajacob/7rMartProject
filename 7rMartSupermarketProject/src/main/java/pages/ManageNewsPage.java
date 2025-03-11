@@ -35,7 +35,7 @@ public class ManageNewsPage {
 	private WebElement newNewsAlert;
 	@FindBy(xpath = "//h4[text()='Manage News']")
 	private WebElement refreshNewsDisplayed;
-	@FindBy(xpath = "//td[text()='OFFERR!! OFFERR!!']")
+	@FindBy(xpath = "//td[text()='20% Discount on all garments']")
 	private WebElement searchNewsIsDisplayed;
 
 	public void clickOnManageNewsButton() {
