@@ -24,12 +24,14 @@ public class HomePage {
 	@FindBy(xpath = "//p[text()='Sign in to start your session']")
 	private WebElement signInPage;
 
-	public void clickOnAdminButton() {
+	public HomePage clickOnAdminButton() {
 		adminDropDown.click();
+		return this;
 	}
 
-	public void clickOnTheLogoutButton() {
+	public LoginPage clickOnTheLogoutButton() {
 		logoutButton.click();
+		return new LoginPage(driver);
 	}
 
 	public boolean isBackToLoginPage() {

@@ -10,8 +10,12 @@
 			<!-- <class name="testScript.HomeTest" /> <class name="testScript.ManageNewsTest" 
 				/> <class name="testScript.SubCategoryTest" /> <class name="testScript.AdminUserTest" 
 				/> <class name="testScript.LoginTest" /> -->
-			<class name="testScript.HomeTest">
-			</class> 
+			<class name="testScript.HomeTest"/>
+				<!--<methods>
+					<include
+						name="verifyUserLoginWithInvalidUsernameAndInvalidPassword"></include>
+				</methods>
+			</class>-->
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

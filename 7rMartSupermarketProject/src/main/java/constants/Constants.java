@@ -7,4 +7,7 @@ public class Constants {
 	
 	// TO DEFINE IMAGE PATH
 	public static final String IMAGEFILE = System.getProperty("user.dir") + "\\src\\test\\resources\\sports Toy car.jpg";
+	
+	public static final String CONFIGFILE=System.getProperty("user.dir") +"\\src\\main\\resources\\Config.properties";
+			
 }
