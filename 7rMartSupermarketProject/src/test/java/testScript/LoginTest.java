@@ -14,9 +14,9 @@ import utilities.ExcelUtility;
 
 public class LoginTest extends Base {
 
-	@Test(priority = 1, description = "Verification of user login with valid Credentials",groups = {"smoke"} )
+	@Test(priority = 1, description = "Verification of user login with valid Credentials",groups = {"smoke"}, retryAnalyzer = retry.ReTry.class )
 	public void verifyUserLoginWithValidUsernameAndValidPassword() throws IOException {
-		String username = ExcelUtility.readStringData(1, 0, "LoginPage");
+		String username = ExcelUtility.readStringData(6, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(1, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
 		login.enterUsernameOnUsernameField(username);
