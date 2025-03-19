@@ -15,8 +15,8 @@ public class ManageNewsPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//p[text()='Manage News']")
-	private WebElement manageNews;
+//	@FindBy(xpath = "//p[text()='Manage News']")
+//	private WebElement manageNews;
 	@FindBy(xpath = "//a[text()=' New']")
 	private WebElement newButton;
 	@FindBy(xpath = "//textarea[@id='news']")
@@ -35,39 +35,46 @@ public class ManageNewsPage {
 	private WebElement newNewsAlert;
 	@FindBy(xpath = "//h4[text()='Manage News']")
 	private WebElement refreshNewsDisplayed;
-	@FindBy(xpath = "//td[text()='20% Discount on all garments']")
+	@FindBy(xpath = "//td[text()='todsys news updated']")
 	private WebElement searchNewsIsDisplayed;
 
-	public void clickOnManageNewsButton() {
-		manageNews.click();
-	}
+//	public void clickOnManageNewsButton() {
+//		manageNews.click();
+//	}
 
-	public void clickOnNewButtonOfManageNewsPage() {
+	public ManageNewsPage clickOnNewButtonOfManageNewsPage() {
 		newButton.click();
+		return this;
 	}
 
-	public void enterNewNewsOnNewsField(String news) {
+	public ManageNewsPage enterNewNewsOnNewsField(String news) {
 		this.news.sendKeys(news);
+		return this;
 	}
 
-	public void clickOnSaveButtonOfNewNewsCreationpage() {
+	public ManageNewsPage clickOnSaveButtonOfNewNewsCreationpage() {
 		saveButton.click();
+		return this;
 	}
 
-	public void clickOnResetButtonOfManageNewsPage() {
+	public ManageNewsPage clickOnResetButtonOfManageNewsPage() {
 		resetButton.click();
+		return this;
 	}
 
-	public void clickOnSearchButtonOfManageNewsPage() {
+	public ManageNewsPage clickOnSearchButtonOfManageNewsPage() {
 		searchButton.click();
+		return this;
 	}
 
-	public void enterSearchNewsOnSearchNewsField(String news) {
+	public ManageNewsPage enterSearchNewsOnSearchNewsField(String news) {
 		searchNews.sendKeys(news);
+		return this;
 	}
 
-	public void clickOnSearchButtonOfSearchNewsPage() {
+	public ManageNewsPage clickOnSearchButtonOfSearchNewsPage() {
 		searchButtonOnSearchPage.click();
+		return this;
 	}
 
 	public String getTextFromAlert() {

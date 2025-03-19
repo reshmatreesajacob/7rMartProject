@@ -73,8 +73,9 @@ public class LoginTest extends Base {
 
 	@DataProvider(name = "loginProvider")
 	public Object[][] getDataFromDataProvider() throws IOException {
-		return new Object[][] { new Object[] { "admin", "admin" }, new Object[] { "admin", "ad123" },
-				new Object[] { "ad123", "admin" }, new Object[] { "ad123", "ad123" }
+		return new Object[][] {// new Object[] { "admin", "admin" },
+			new Object[] { "admin", "Test" },
+				new Object[] { "Test", "admin" }, new Object[] { "Test", "Test" }
 //			,new Object[] {ExcelUtility.readStringData(4, 0, "LoginPage"),
 //					ExcelUtility.readStringData(4, 1, "LoginPage")}
 		};

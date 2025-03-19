@@ -15,8 +15,8 @@ public class AdminUserPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//p[contains(text(),' Admin')]")
-	private WebElement adminUsers;
+//	@FindBy(xpath = "//p[contains(text(),' Admin')]")
+//	private WebElement adminUsers;
 	@FindBy(xpath = "//p[text()='Manage Users']")
 	private WebElement manageUsers;
 	@FindBy(xpath = "//a[text()=' New']")
@@ -46,54 +46,66 @@ public class AdminUserPage {
 	@FindBy(xpath = "//td[text()='movieuser']")
 	private WebElement searchUserListIsDisplayed;
 
-	public void clickOnAdminUsersButton() {
-		adminUsers.click();
-	}
+//	public AdminUserPage clickOnAdminUsersButton() {
+//		adminUsers.click();
+//		return new AdminUserPage(driver);
+//	}
 
-	public void clickOnManageUsersButton() {
+	public AdminUserPage clickOnManageUsersButton() {
 		manageUsers.click();
+		return this;
 	}
 
-	public void clickOnNewButton() {
+	public AdminUserPage clickOnNewButton() {
 		newUser.click();
+		return this;
 	}
 
-	public void enterNewUsernameOnUsernameField(String username) {
+	public AdminUserPage enterNewUsernameOnUsernameField(String username) {
 		newUsername.sendKeys(username);
+		return this;
 	}
 
-	public void enterNewPasswordOnPasswordField(String password) {
+	public AdminUserPage enterNewPasswordOnPasswordField(String password) {
 		newPassword.sendKeys(password);
+		return this;
 	}
 
-	public void selectNewUserTypeOnUserTypeField(String userType) {
+	public AdminUserPage selectNewUserTypeOnUserTypeField(String userType) {
 		Select user = new Select(this.userType);
 		user.selectByContainsVisibleText(userType);
+		return this;
 	}
 
-	public void clickOnSaveButton() {
+	public AdminUserPage clickOnSaveButton() {
 		saveButton.click();
+		return this;
 	}
 
-	public void clickOnResetButton() {
+	public AdminUserPage clickOnResetButton() {
 		resetButton.click();
+		return this;
 	}
 
-	public void clickOnSearchButton() {
+	public AdminUserPage clickOnSearchButton() {
 		searchButton.click();
+		return this;
 	}
 
-	public void enterUsernameOnUsernameFieldOfSearchPage(String username) {
+	public AdminUserPage enterUsernameOnUsernameFieldOfSearchPage(String username) {
 		searchUsername.sendKeys(username);
+		return this;
 	}
 
-	public void selectUserTypeOnUserTypeFieldOfSearchPage(String userType) {
+	public AdminUserPage selectUserTypeOnUserTypeFieldOfSearchPage(String userType) {
 		Select user = new Select(this.searchUserType);
 		user.selectByContainsVisibleText(userType);
+		return this;
 	}
 
-	public void clickOnSearchButtonInSearchPage() {
+	public AdminUserPage clickOnSearchButtonInSearchPage() {
 		searchButtonInSearchPage.click();
+		return this;
 	}
 
 	public String getTextFromAlert() {

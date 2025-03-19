@@ -7,15 +7,12 @@
 	</listeners>
 	<test thread-count="5" name="Test">
 		<classes>
-			<!-- <class name="testScript.HomeTest" /> <class name="testScript.ManageNewsTest" 
-				/> <class name="testScript.SubCategoryTest" /> <class name="testScript.AdminUserTest" 
-				/> <class name="testScript.LoginTest" /> -->
-			<class name="testScript.HomeTest"/>
-				<!--<methods>
+			<class name="testScript.AdminUserTest">
+				<methods>
 					<include
-						name="verifyUserLoginWithInvalidUsernameAndInvalidPassword"></include>
-				</methods>
-			</class>-->
+						name="verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton"></include>
+				</methods> 
+			</class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
