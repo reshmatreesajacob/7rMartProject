@@ -17,20 +17,19 @@ import utilities.ExcelUtility;
 
 public class HomeTest extends Base {
 
-	@Test(description = "Verification of whether the user is able to use the Logout functionality after LogIn",retryAnalyzer = retry.ReTry.class)
+	@Test(description = "Verification of whether the user is able to use the Logout functionality after LogIn", retryAnalyzer = retry.ReTry.class)
 	public void verifySuccessfullUserLogoutFromHomePageAfterLogin() throws IOException {
 
-		String username = ExcelUtility.readStringData(1, 6, "LoginPage");
+		HomePage home;
+
+		String username = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(1, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(username);
-		login.enterPasswordOnPasswordField(password);
-		login.clickOnCheckbox();
-		login.clickOnSignInButton();
+		login.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password).clickOnCheckbox();
 
-		HomePage home = new HomePage(driver);
+		home = login.clickOnSignInButton();
 		home.clickOnAdminButton();
-		home.clickOnTheLogoutButton();
+		login = home.clickOnTheLogoutButton();
 
 		boolean isBackToLoginPage = home.isBackToLoginPage();
 		Assert.assertTrue(isBackToLoginPage, Messages.LOGOUTERROR);

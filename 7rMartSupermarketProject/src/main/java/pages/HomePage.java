@@ -23,17 +23,40 @@ public class HomePage {
 	private WebElement logoutButton;
 	@FindBy(xpath = "//p[text()='Sign in to start your session']")
 	private WebElement signInPage;
+	@FindBy(xpath = "//p[contains(text(),' Admin')]")
+	private WebElement adminUsers;
+	@FindBy(xpath = "//p[text()='Sub Category']")
+	private WebElement subCategory;
+	@FindBy(xpath = "//p[text()='Manage News']")
+	private WebElement manageNews;
 
-	public void clickOnAdminButton() {
+	public HomePage clickOnAdminButton() {
 		adminDropDown.click();
+		return this;
 	}
 
-	public void clickOnTheLogoutButton() {
+	public LoginPage clickOnTheLogoutButton() {
 		logoutButton.click();
+		return new LoginPage(driver);
 	}
 
 	public boolean isBackToLoginPage() {
 		return signInPage.isDisplayed();
+	}
+
+	public AdminUserPage clickOnAdminUsersButton() {
+		adminUsers.click();
+		return new AdminUserPage(driver);
+	}
+
+	public SubCategoryPage clickOnSubCategoryButton() {
+		subCategory.click();
+		return new SubCategoryPage(driver);
+	}
+
+	public ManageNewsPage clickOnManageNewsButton() {
+		manageNews.click();
+		return new ManageNewsPage(driver);
 	}
 
 }

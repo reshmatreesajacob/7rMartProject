@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 
 import automationCore.Base;
 import constants.Messages;
+import pages.AdminUserPage;
+import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageNewsPage;
 import utilities.ExcelUtility;
@@ -21,17 +23,22 @@ public class ManageNewsTest extends Base {
 		String username = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(1, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(username);
-		login.enterPasswordOnPasswordField(password);
-		login.clickOnCheckbox();
-		login.clickOnSignInButton();
+		// chainning of methods
+		login.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password).clickOnCheckbox();
 
-		ManageNewsPage manage = new ManageNewsPage(driver);
-		manage.clickOnManageNewsButton();
-		manage.clickOnNewButtonOfManageNewsPage();
+		HomePage home;
+		home = login.clickOnSignInButton();
+
+		ManageNewsPage manage;
+		manage = home.clickOnManageNewsButton();
+
+//		ManageNewsPage manage = new ManageNewsPage(driver);
+//		manage.clickOnManageNewsButton();
+
 		String news = ExcelUtility.readStringData(1, 0, "ManageNewsPage");
-		manage.enterNewNewsOnNewsField(news);
-		manage.clickOnSaveButtonOfNewNewsCreationpage();
+
+		manage.clickOnNewButtonOfManageNewsPage().enterNewNewsOnNewsField(news).clickOnSaveButtonOfNewNewsCreationpage();
+
 		String expectedResult = "Alert!";
 		String actualResult = manage.getTextFromAlert();
 		Assert.assertEquals(actualResult, expectedResult, Messages.MANAGENEWSCREATIONERROR);
@@ -42,17 +49,19 @@ public class ManageNewsTest extends Base {
 		String username = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(1, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(username);
-		login.enterPasswordOnPasswordField(password);
-		login.clickOnCheckbox();
-		login.clickOnSignInButton();
+		// chainning of methods
+		login.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password).clickOnCheckbox();
 
-		ManageNewsPage manage = new ManageNewsPage(driver);
-		manage.clickOnManageNewsButton();
-		manage.clickOnSearchButtonOfManageNewsPage();
+		HomePage home;
+		home = login.clickOnSignInButton();
+
+		ManageNewsPage manage;
+		manage = home.clickOnManageNewsButton();
+
 		String news = ExcelUtility.readStringData(1, 2, "ManageNewsPage");
-		manage.enterSearchNewsOnSearchNewsField(news);
-		manage.clickOnSearchButtonOfSearchNewsPage();
+
+		manage.clickOnSearchButtonOfManageNewsPage().enterSearchNewsOnSearchNewsField(news)
+				.clickOnSearchButtonOfSearchNewsPage();
 
 		boolean issearchDisplayed = manage.isSearchNewsIsDisplayed();
 		Assert.assertTrue(issearchDisplayed, Messages.MANAGENEWSSEARCHPAGEERROR);
@@ -64,13 +73,14 @@ public class ManageNewsTest extends Base {
 		String username = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(1, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(username);
-		login.enterPasswordOnPasswordField(password);
-		login.clickOnCheckbox();
-		login.clickOnSignInButton();
+		// chainning of methods
+		login.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password).clickOnCheckbox();
 
-		ManageNewsPage manage = new ManageNewsPage(driver);
-		manage.clickOnManageNewsButton();
+		HomePage home;
+		home = login.clickOnSignInButton();
+
+		ManageNewsPage manage;
+		manage = home.clickOnManageNewsButton();
 		manage.clickOnResetButtonOfManageNewsPage();
 
 		String expectedResult = "Manage News";

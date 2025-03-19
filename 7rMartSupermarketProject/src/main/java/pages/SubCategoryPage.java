@@ -18,8 +18,8 @@ public class SubCategoryPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//p[text()='Sub Category']")
-	private WebElement subCategory;
+//	@FindBy(xpath = "//p[text()='Sub Category']")
+//	private WebElement subCategory;
 	@FindBy(xpath = "//a[text()=' New']")
 	private WebElement newButton;
 	@FindBy(xpath = "//select[@id='cat_id']")
@@ -48,21 +48,24 @@ public class SubCategoryPage {
 	@FindBy(xpath = "//td[text()='Sports Toy Car2']")
 	private WebElement searchSubcategoryIsDisplayed;
 
-	public void clickOnSubCategoryButton() {
-		subCategory.click();
-	}
+//	public void clickOnSubCategoryButton() {
+//		subCategory.click();
+//	}
 
-	public void clickOnNewButtonOfSubCategoryPage() {
+	public SubCategoryPage clickOnNewButtonOfSubCategoryPage() {
 		newButton.click();
+		return this;
 	}
 
-	public void selectCategoryFromSubCategoryCreationPage(String category1) {
+	public SubCategoryPage selectCategoryFromSubCategoryCreationPage(String category1) {
 		Select select = new Select(categorySelection);
 		select.selectByContainsVisibleText(category1);
+		return this;
 	}
 
-	public void enterSubCategoryOfSubCategoryCreationPage(String subCategory1) {
+	public SubCategoryPage enterSubCategoryOfSubCategoryCreationPage(String subCategory1) {
 		subCategoryText.sendKeys(subCategory1);
+		return this;
 	}
 
 	// 2 ways -- using excel or from constants class
@@ -72,33 +75,40 @@ public class SubCategoryPage {
 //	}
 
 	// CALLING USING CONSTANTS
-	public void selectImageOfSubCategoryCreationPage() {
+	public SubCategoryPage selectImageOfSubCategoryCreationPage() {
 		imageUploadButton.sendKeys(Constants.IMAGEFILE);
+		return this;
 	}
 
-	public void clickOnSaveButtonOfSubCategoryCreationPage() {
+	public SubCategoryPage clickOnSaveButtonOfSubCategoryCreationPage() {
 		saveButton.click();
+		return this;
 	}
 
-	public void clickOnResetButtonOfSubCategoryPage() {
+	public SubCategoryPage clickOnResetButtonOfSubCategoryPage() {
 		resetButton.click();
+		return this;
 	}
 
-	public void clickOnSearchButtonOfSubCategoryPage() {
+	public SubCategoryPage clickOnSearchButtonOfSubCategoryPage() {
 		searchButton.click();
+		return this;
 	}
 
-	public void selectCategoryFromSubCategorySearchPage(String category1) {
+	public SubCategoryPage selectCategoryFromSubCategorySearchPage(String category1) {
 		Select select = new Select(searchCategory);
 		select.selectByContainsVisibleText(category1);
+		return this;
 	}
 
-	public void enterSubCategoryOfSubCategorySearchPage(String subCategory1) {
+	public SubCategoryPage enterSubCategoryOfSubCategorySearchPage(String subCategory1) {
 		searchSubcategory.sendKeys(subCategory1);
+		return this;
 	}
 
-	public void clickOnSearchButtonOfSubCategorySearchPage() {
+	public SubCategoryPage clickOnSearchButtonOfSubCategorySearchPage() {
 		searchButtonOnSearchPage.click();
+		return this;
 	}
 
 	public String getTextFromAlert() {

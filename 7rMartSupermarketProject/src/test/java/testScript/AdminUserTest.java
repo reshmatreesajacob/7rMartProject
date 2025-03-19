@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 import automationCore.Base;
 import constants.Messages;
 import pages.AdminUserPage;
+import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 import utilities.FakerUtility;
@@ -20,19 +21,19 @@ import utilities.FakerUtility;
 public class AdminUserTest extends Base {
 	@Test
 	public void verifyWhetherUserIsAbleToAddNewUserToTheUsersList() throws IOException {
+
 		String username = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(1, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(username);
-		login.enterPasswordOnPasswordField(password);
-		login.clickOnCheckbox();
-		login.clickOnSignInButton();
+		// chainning of methods
+		login.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password).clickOnCheckbox();
 
-		AdminUserPage admin = new AdminUserPage(driver);
-		admin.clickOnAdminUsersButton();
-		admin.clickOnManageUsersButton();
+		HomePage home;
+		home = login.clickOnSignInButton();
 
-		admin.clickOnNewButton();
+		AdminUserPage admin;
+		admin = home.clickOnAdminUsersButton();
+
 //		String newUsername = ExcelUtility.readStringData(2, 0, "AdminUserPage");
 //		String newPassword = ExcelUtility.readStringData(2, 1, "AdminUserPage");
 
@@ -40,10 +41,9 @@ public class AdminUserTest extends Base {
 		String newUsername = faker.createRandomUsername();
 		String newPassword = faker.createRandomPassword();
 		String newUserType = ExcelUtility.readStringData(2, 2, "AdminUserPage");
-		admin.enterNewUsernameOnUsernameField(newUsername);
-		admin.enterNewPasswordOnPasswordField(newPassword);
-		admin.selectNewUserTypeOnUserTypeField(newUserType);
-		admin.clickOnSaveButton();
+		admin.clickOnManageUsersButton().clickOnNewButton().enterNewUsernameOnUsernameField(newUsername)
+				.enterNewPasswordOnPasswordField(newPassword).selectNewUserTypeOnUserTypeField(newUserType)
+				.clickOnSaveButton();
 
 		String expectedResult = "Alert!";
 		String actualResult = admin.getTextFromAlert();
@@ -55,16 +55,15 @@ public class AdminUserTest extends Base {
 		String username = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(1, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(username);
-		login.enterPasswordOnPasswordField(password);
-		login.clickOnCheckbox();
-		login.clickOnSignInButton();
+		// chainning of methods
+		login.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password).clickOnCheckbox();
 
-		AdminUserPage admin = new AdminUserPage(driver);
-		admin.clickOnAdminUsersButton();
-		admin.clickOnManageUsersButton();
+		HomePage home;
+		home = login.clickOnSignInButton();
 
-		admin.clickOnResetButton();
+		AdminUserPage admin;
+		admin = home.clickOnAdminUsersButton();
+		admin.clickOnManageUsersButton().clickOnResetButton();
 
 		String expectedResult = "Admin Users";
 		String actualResult = admin.getTextFromRefreshUserDisplayed();
@@ -76,21 +75,19 @@ public class AdminUserTest extends Base {
 		String username = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(1, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(username);
-		login.enterPasswordOnPasswordField(password);
-		login.clickOnCheckbox();
-		login.clickOnSignInButton();
+		// chainning of methods
+		login.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password).clickOnCheckbox();
 
-		AdminUserPage admin = new AdminUserPage(driver);
-		admin.clickOnAdminUsersButton();
-		admin.clickOnManageUsersButton();
+		HomePage home;
+		home = login.clickOnSignInButton();
 
-		admin.clickOnSearchButton();
+		AdminUserPage admin;
+		admin = home.clickOnAdminUsersButton();
+
 		String searchUsername = ExcelUtility.readStringData(2, 4, "AdminUserPage");
 		String searchUserType = ExcelUtility.readStringData(2, 5, "AdminUserPage");
-		admin.enterUsernameOnUsernameFieldOfSearchPage(searchUsername);
-		admin.selectUserTypeOnUserTypeFieldOfSearchPage(searchUserType);
-		admin.clickOnSearchButtonInSearchPage();
+		admin.clickOnManageUsersButton().clickOnSearchButton().enterUsernameOnUsernameFieldOfSearchPage(searchUsername)
+				.selectUserTypeOnUserTypeFieldOfSearchPage(searchUserType).clickOnSearchButtonInSearchPage();
 
 		boolean issearchDisplayed = admin.isSearchAUserIsDisplayed();
 		Assert.assertTrue(issearchDisplayed, Messages.USERSEARCHPAGEERROR);

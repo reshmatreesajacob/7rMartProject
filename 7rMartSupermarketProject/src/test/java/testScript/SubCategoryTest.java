@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 
 import automationCore.Base;
 import constants.Messages;
+import pages.AdminUserPage;
+import pages.HomePage;
 import pages.LoginPage;
 import pages.SubCategoryPage;
 import utilities.ExcelUtility;
@@ -23,23 +25,27 @@ public class SubCategoryTest extends Base {
 		String username = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(1, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(username);
-		login.enterPasswordOnPasswordField(password);
-		login.clickOnCheckbox();
-		login.clickOnSignInButton();
+		// chainning of methods
+		login.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password).clickOnCheckbox();
 
-		SubCategoryPage subcategory = new SubCategoryPage(driver);
-		subcategory.clickOnSubCategoryButton();
+		HomePage home;
+		home = login.clickOnSignInButton();
 
-		subcategory.clickOnNewButtonOfSubCategoryPage();
+		SubCategoryPage subcategory;
+		subcategory = home.clickOnSubCategoryButton();
+
+//		SubCategoryPage subcategory = new SubCategoryPage(driver);
+//		subcategory.clickOnSubCategoryButton();
+
 		String category = ExcelUtility.readStringData(1, 0, "SubCategoryPage");
-		subcategory.selectCategoryFromSubCategoryCreationPage(category);
 		String subCategory = ExcelUtility.readStringData(1, 1, "SubCategoryPage");
-		subcategory.enterSubCategoryOfSubCategoryCreationPage(subCategory);
 		String image = ExcelUtility.readStringData(1, 2, "SubCategoryPage");
+
+		subcategory.clickOnNewButtonOfSubCategoryPage().selectCategoryFromSubCategoryCreationPage(category)
+				.enterSubCategoryOfSubCategoryCreationPage(subCategory).selectImageOfSubCategoryCreationPage()
+				.clickOnSaveButtonOfSubCategoryCreationPage();
+
 //		subcategory.selectImageOfSubCategoryCreationPage(image);
-		subcategory.selectImageOfSubCategoryCreationPage();
-		subcategory.clickOnSaveButtonOfSubCategoryCreationPage();
 
 		String expectedResult = "Alert!";
 		String actualResult = subcategory.getTextFromAlert();
@@ -51,13 +57,14 @@ public class SubCategoryTest extends Base {
 		String username = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(1, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(username);
-		login.enterPasswordOnPasswordField(password);
-		login.clickOnCheckbox();
-		login.clickOnSignInButton();
+		// chainning of methods
+		login.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password).clickOnCheckbox();
 
-		SubCategoryPage subcategory = new SubCategoryPage(driver);
-		subcategory.clickOnSubCategoryButton();
+		HomePage home;
+		home = login.clickOnSignInButton();
+
+		SubCategoryPage subcategory;
+		subcategory = home.clickOnSubCategoryButton();
 
 		subcategory.clickOnResetButtonOfSubCategoryPage();
 
@@ -71,20 +78,20 @@ public class SubCategoryTest extends Base {
 		String username = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(1, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(username);
-		login.enterPasswordOnPasswordField(password);
-		login.clickOnCheckbox();
-		login.clickOnSignInButton();
+		// chainning of methods
+		login.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password).clickOnCheckbox();
 
-		SubCategoryPage subcategory = new SubCategoryPage(driver);
-		subcategory.clickOnSubCategoryButton();
+		HomePage home;
+		home = login.clickOnSignInButton();
 
-		subcategory.clickOnSearchButtonOfSubCategoryPage();
+		SubCategoryPage subcategory;
+		subcategory = home.clickOnSubCategoryButton();
+
 		String category = ExcelUtility.readStringData(1, 0, "SubCategoryPage");
-		subcategory.selectCategoryFromSubCategorySearchPage(category);
 		String subCategory = ExcelUtility.readStringData(1, 1, "SubCategoryPage");
-		subcategory.enterSubCategoryOfSubCategorySearchPage(subCategory);
-		subcategory.clickOnSearchButtonOfSubCategorySearchPage();
+
+		subcategory.clickOnSearchButtonOfSubCategoryPage().selectCategoryFromSubCategorySearchPage(category)
+				.enterSubCategoryOfSubCategorySearchPage(subCategory).clickOnSearchButtonOfSubCategorySearchPage();
 
 		boolean issearchDisplayed = subcategory.isSearchSubcategoryIsDisplayed();
 		Assert.assertTrue(issearchDisplayed, Messages.SUBCATEGORYSEARCHPAGEERROR);
