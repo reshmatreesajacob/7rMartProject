@@ -37,6 +37,7 @@ public class AdminUserTest extends Base {
 //		String newUsername = ExcelUtility.readStringData(2, 0, "AdminUserPage");
 //		String newPassword = ExcelUtility.readStringData(2, 1, "AdminUserPage");
 
+		
 		FakerUtility faker = new FakerUtility();
 		String newUsername = faker.createRandomUsername();
 		String newPassword = faker.createRandomPassword();
@@ -53,7 +54,7 @@ public class AdminUserTest extends Base {
 	@Test
 	public void verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton() throws IOException {
 		String username = ExcelUtility.readStringData(1, 0, "LoginPage");
-		String password = ExcelUtility.readStringData(1, 1, "LoginPage");
+		String password = ExcelUtility.readStringData(1, 1, "LoginPage"); 
 		LoginPage login = new LoginPage(driver);
 		// chainning of methods
 		login.enterUsernameOnUsernameField(username).enterPasswordOnPasswordField(password).clickOnCheckbox();

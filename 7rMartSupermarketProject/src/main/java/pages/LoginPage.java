@@ -1,4 +1,4 @@
-package pages;
+ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -44,6 +44,7 @@ public class LoginPage {
 	public LoginPage clickOnCheckbox() {
 		PageUtility page=new PageUtility();
 		page.clickOnCheckbox(rememberMeCheckbox);
+//		rememberMeCheckbox.click();
 		return this;
 	}
 

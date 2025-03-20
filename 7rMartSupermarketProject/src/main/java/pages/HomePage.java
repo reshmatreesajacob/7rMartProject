@@ -1,4 +1,4 @@
-package pages;
+ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +12,8 @@ public class HomePage {
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
+		// initElements is a method to initialize the elements in this class in
+				// PageFqactory class
 		PageFactory.initElements(driver, this);
 	}
 

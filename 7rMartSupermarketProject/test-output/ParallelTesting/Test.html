@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>12/4/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>13/3/1</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Mar 19 13:08:22 IST 2025</td>
+<td>Started on:</td><td>Thu Mar 20 13:23:41 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>40 seconds (40391 ms)</td>
+<tr><td>Total time:</td><td>30 seconds (30799 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,72 +76,17 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testScript.AdminUserTest.verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton()'><b>verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton</b><br>Test class: testScript.AdminUserTest</td>
-<td><div><pre>org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
-	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
-	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:94)
-	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:132)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
-	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
-	at utilities.ExcelUtility.readStringData(ExcelUtility.java:19)
-	at testScript.AdminUserTest.verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton(AdminUserTest.java:55)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.util.zip.ZipException: Unexpected record signature: 0XDE293484
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
-	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
-	... 24 more
-... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2139540803", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2139540803'><pre>org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
-	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
-	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:94)
-	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:132)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
-	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
-	at utilities.ExcelUtility.readStringData(ExcelUtility.java:19)
-	at testScript.AdminUserTest.verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton(AdminUserTest.java:55)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.util.zip.ZipException: Unexpected record signature: 0XDE293484
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
-	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
-	... 24 more
-</pre></div></td>
-<td>0</td>
-<td>testScript.AdminUserTest@5ddeb7cb</td></tr>
-<tr>
-<td title='testScript.LoginTest.verifyUserLoginWithInvalidUsernameAndInvalidPassword()'><b>verifyUserLoginWithInvalidUsernameAndInvalidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with invalid username and invalid password<br>Parameters: admin, ad123</td>
+<td title='testScript.LoginTest.verifyUserLoginWithInvalidUsernameAndInvalidPassword()'><b>verifyUserLoginWithInvalidUsernameAndInvalidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with invalid username and invalid password<br>Parameters: Test, Test</td>
 <td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
   (Session info: chrome=134.0.6998.89)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9ccac134297343a1c886ebb3fda1daea, isElementDisplayed {id=f.0CA082DD2AEA64A997ADCC5646069D8F.d.F2FDCBF5C3A5D209B57CF6025339DD52.e.22}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\RESHMA\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52841}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52841/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (9ccac134297343a1c886ebb3fda1daea)] -&gt; xpath: //b[text()=&apos;7rmart supermarket&apos;]]
-Session ID: 9ccac134297343a1c886ebb3fda1daea
+Command: [773cdf83a2df7720fa9abf839e7e40dc, isElementDisplayed {id=f.CDEA8904F03366F75862116C468EFF44.d.44F1FCDB40EAC9227A586278D2A49E8C.e.22}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.90 (219ee74681fc..., userDataDir: C:\Users\RESHMA\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51122}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51122/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (773cdf83a2df7720fa9abf839e7e40dc)] -&gt; xpath: //b[text()=&apos;7rmart supermarket&apos;]]
+Session ID: 773cdf83a2df7720fa9abf839e7e40dc
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -153,24 +98,24 @@ Session ID: 9ccac134297343a1c886ebb3fda1daea
 	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
-	at pages.LoginPage.isTitleDisplayed(LoginPage.java:59)
+	at pages.LoginPage.isTitleDisplayed(LoginPage.java:61)
 	at testScript.LoginTest.verifyUserLoginWithInvalidUsernameAndInvalidPassword(LoginTest.java:70)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2033706527", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2033706527'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace873254285", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace873254285'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
   (Session info: chrome=134.0.6998.89)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9ccac134297343a1c886ebb3fda1daea, isElementDisplayed {id=f.0CA082DD2AEA64A997ADCC5646069D8F.d.F2FDCBF5C3A5D209B57CF6025339DD52.e.22}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\RESHMA\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52841}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52841/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (9ccac134297343a1c886ebb3fda1daea)] -&gt; xpath: //b[text()=&apos;7rmart supermarket&apos;]]
-Session ID: 9ccac134297343a1c886ebb3fda1daea
+Command: [773cdf83a2df7720fa9abf839e7e40dc, isElementDisplayed {id=f.CDEA8904F03366F75862116C468EFF44.d.44F1FCDB40EAC9227A586278D2A49E8C.e.22}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.90 (219ee74681fc..., userDataDir: C:\Users\RESHMA\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51122}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51122/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (773cdf83a2df7720fa9abf839e7e40dc)] -&gt; xpath: //b[text()=&apos;7rmart supermarket&apos;]]
+Session ID: 773cdf83a2df7720fa9abf839e7e40dc
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -187,7 +132,7 @@ Session ID: 9ccac134297343a1c886ebb3fda1daea
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
-	at pages.LoginPage.isTitleDisplayed(LoginPage.java:59)
+	at pages.LoginPage.isTitleDisplayed(LoginPage.java:61)
 	at testScript.LoginTest.verifyUserLoginWithInvalidUsernameAndInvalidPassword(LoginTest.java:70)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -209,66 +154,63 @@ Session ID: 9ccac134297343a1c886ebb3fda1daea
 <td>0</td>
 <td>testScript.LoginTest@7bba5817</td></tr>
 <tr>
-<td title='testScript.ManageNewsTest.verifyWhetherUserIsAbleTosearchNewsInManageNews()'><b>verifyWhetherUserIsAbleTosearchNewsInManageNews</b><br>Test class: testScript.ManageNewsTest<br>Test method: Verify whether the user can search a news in the News list using Search Button</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[text()=&apos;20% Discount on all garments&apos;]&quot;}
-  (Session info: chrome=134.0.6998.89)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8b76907e5d09d2a2375c65b8764a2aa6, findElement {using=xpath, value=//td[text()=&apos;20% Discount on all garments&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\RESHMA\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52715}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52715/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8b76907e5d09d2a2375c65b8764a2aa6
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
-	at pages.ManageNewsPage.isSearchNewsIsDisplayed(ManageNewsPage.java:89)
-	at testScript.ManageNewsTest.verifyWhetherUserIsAbleTosearchNewsInManageNews(ManageNewsTest.java:66)
+<td title='testScript.AdminUserTest.verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton()'><b>verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton</b><br>Test class: testScript.AdminUserTest</td>
+<td><div><pre>java.io.IOException: Stream Closed
+	at java.base/java.io.FileInputStream.available0(Native Method)
+	at java.base/java.io.FileInputStream.available(FileInputStream.java:473)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:428)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+	at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:197)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.fill(ZipArchiveInputStream.java:861)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readFromInflater(ZipArchiveInputStream.java:650)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readDeflated(ZipArchiveInputStream.java:625)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.read(ZipArchiveInputStream.java:528)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.read(ZipArchiveThresholdInputStream.java:80)
+	at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:240)
+	at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:203)
+	at org.apache.poi.openxml4j.util.ZipArchiveFakeEntry.&lt;init&gt;(ZipArchiveFakeEntry.java:82)
+	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:98)
+	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:132)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
+	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
+	at utilities.ExcelUtility.readStringData(ExcelUtility.java:22)
+	at testScript.AdminUserTest.verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton(AdminUserTest.java:55)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1106711962", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1106711962'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//td[text()=&apos;20% Discount on all garments&apos;]&quot;}
-  (Session info: chrome=134.0.6998.89)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [8b76907e5d09d2a2375c65b8764a2aa6, findElement {using=xpath, value=//td[text()=&apos;20% Discount on all garments&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\RESHMA\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52715}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52715/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8b76907e5d09d2a2375c65b8764a2aa6
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
-	at pages.ManageNewsPage.isSearchNewsIsDisplayed(ManageNewsPage.java:89)
-	at testScript.ManageNewsTest.verifyWhetherUserIsAbleTosearchNewsInManageNews(ManageNewsTest.java:66)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace288768832", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace288768832'><pre>java.io.IOException: Stream Closed
+	at java.base/java.io.FileInputStream.available0(Native Method)
+	at java.base/java.io.FileInputStream.available(FileInputStream.java:473)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:428)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+	at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:197)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.fill(ZipArchiveInputStream.java:861)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readFromInflater(ZipArchiveInputStream.java:650)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readDeflated(ZipArchiveInputStream.java:625)
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.read(ZipArchiveInputStream.java:528)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.read(ZipArchiveThresholdInputStream.java:80)
+	at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:240)
+	at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:203)
+	at org.apache.poi.openxml4j.util.ZipArchiveFakeEntry.&lt;init&gt;(ZipArchiveFakeEntry.java:82)
+	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:98)
+	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:132)
+	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
+	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
+	at utilities.ExcelUtility.readStringData(ExcelUtility.java:22)
+	at testScript.AdminUserTest.verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton(AdminUserTest.java:55)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -286,20 +228,20 @@ Session ID: 8b76907e5d09d2a2375c65b8764a2aa6
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
 </pre></div></td>
-<td>6</td>
-<td>testScript.ManageNewsTest@7c137fd5</td></tr>
+<td>0</td>
+<td>testScript.AdminUserTest@5ddeb7cb</td></tr>
 <tr>
-<td title='testScript.LoginTest.verifyUserLoginWithInvalidUsernameAndInvalidPassword()'><b>verifyUserLoginWithInvalidUsernameAndInvalidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with invalid username and invalid password<br>Parameters: ad123, ad123</td>
+<td title='testScript.LoginTest.verifyUserLoginWithInvalidUsernameAndInvalidPassword()'><b>verifyUserLoginWithInvalidUsernameAndInvalidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with invalid username and invalid password<br>Parameters: Test, admin</td>
 <td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
   (Session info: chrome=134.0.6998.89)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [81f8adbff18e9ae9464f4b1beef1436e, isElementDisplayed {id=f.74DD0A762BB31FBBB81679A0FE3E671B.d.ED002E2168E729AFA8B92A219FA21757.e.22}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\RESHMA\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52881}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52881/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (81f8adbff18e9ae9464f4b1beef1436e)] -&gt; xpath: //b[text()=&apos;7rmart supermarket&apos;]]
-Session ID: 81f8adbff18e9ae9464f4b1beef1436e
+Command: [3c68ded0f12cc8023a660f0c1c7d941b, isElementDisplayed {id=f.D88B6C8CD9F8A3103AA2C292452EF252.d.9F78CC74DEFBAA11EE51CA62BC8B1B35.e.20}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.90 (219ee74681fc..., userDataDir: C:\Users\RESHMA\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51102}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51102/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3c68ded0f12cc8023a660f0c1c7d941b)] -&gt; xpath: //b[text()=&apos;7rmart supermarket&apos;]]
+Session ID: 3c68ded0f12cc8023a660f0c1c7d941b
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -311,24 +253,24 @@ Session ID: 81f8adbff18e9ae9464f4b1beef1436e
 	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
-	at pages.LoginPage.isTitleDisplayed(LoginPage.java:59)
+	at pages.LoginPage.isTitleDisplayed(LoginPage.java:61)
 	at testScript.LoginTest.verifyUserLoginWithInvalidUsernameAndInvalidPassword(LoginTest.java:70)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1534078191", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1534078191'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1893481428", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1893481428'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
   (Session info: chrome=134.0.6998.89)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [81f8adbff18e9ae9464f4b1beef1436e, isElementDisplayed {id=f.74DD0A762BB31FBBB81679A0FE3E671B.d.ED002E2168E729AFA8B92A219FA21757.e.22}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\RESHMA\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52881}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52881/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (81f8adbff18e9ae9464f4b1beef1436e)] -&gt; xpath: //b[text()=&apos;7rmart supermarket&apos;]]
-Session ID: 81f8adbff18e9ae9464f4b1beef1436e
+Command: [3c68ded0f12cc8023a660f0c1c7d941b, isElementDisplayed {id=f.D88B6C8CD9F8A3103AA2C292452EF252.d.9F78CC74DEFBAA11EE51CA62BC8B1B35.e.20}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.90 (219ee74681fc..., userDataDir: C:\Users\RESHMA\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51102}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51102/devtoo..., se:cdpVersion: 134.0.6998.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3c68ded0f12cc8023a660f0c1c7d941b)] -&gt; xpath: //b[text()=&apos;7rmart supermarket&apos;]]
+Session ID: 3c68ded0f12cc8023a660f0c1c7d941b
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -345,7 +287,7 @@ Session ID: 81f8adbff18e9ae9464f4b1beef1436e
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
-	at pages.LoginPage.isTitleDisplayed(LoginPage.java:59)
+	at pages.LoginPage.isTitleDisplayed(LoginPage.java:61)
 	at testScript.LoginTest.verifyUserLoginWithInvalidUsernameAndInvalidPassword(LoginTest.java:70)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -376,52 +318,42 @@ Session ID: 81f8adbff18e9ae9464f4b1beef1436e
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testScript.LoginTest.verifyUserLoginWithValidUsernameAndInvalidPassword()'><b>verifyUserLoginWithValidUsernameAndInvalidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with valid username and invalid password</td>
-<td></td>
-<td>0</td>
-<td>testScript.LoginTest@7bba5817</td></tr>
-<tr>
-<td title='testScript.HomeTest.verifySuccessfullUserLogoutFromHomePageAfterLogin()'><b>verifySuccessfullUserLogoutFromHomePageAfterLogin</b><br>Test class: testScript.HomeTest<br>Test method: Verification of whether the user is able to use the Logout functionality after LogIn</td>
+<td title='testScript.AdminUserTest.verifyWhetherUserIsAbleToAddNewUserToTheUsersList()'><b>verifyWhetherUserIsAbleToAddNewUserToTheUsersList</b><br>Test class: testScript.AdminUserTest</td>
 <td></td>
 <td>2</td>
-<td>testScript.HomeTest@231f98ef</td></tr>
+<td>testScript.AdminUserTest@5ddeb7cb</td></tr>
+<tr>
+<td title='testScript.SubCategoryTest.verifyWhetherUserIsAbleTosearchItemsInTheSubCategoryList()'><b>verifyWhetherUserIsAbleTosearchItemsInTheSubCategoryList</b><br>Test class: testScript.SubCategoryTest<br>Test method: Verify whether the user can search a item in the Sub Category list using Search Button</td>
+<td></td>
+<td>1</td>
+<td>testScript.SubCategoryTest@183ec003</td></tr>
 <tr>
 <td title='testScript.LoginTest.verifyUserLoginWithValidUsernameAndValidPassword()'><b>verifyUserLoginWithValidUsernameAndValidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with valid Credentials</td>
 <td></td>
 <td>0</td>
 <td>testScript.LoginTest@7bba5817</td></tr>
 <tr>
-<td title='testScript.SubCategoryTest.verifyWhetherUserIsAbleTosearchItemsInTheSubCategoryList()'><b>verifyWhetherUserIsAbleTosearchItemsInTheSubCategoryList</b><br>Test class: testScript.SubCategoryTest<br>Test method: Verify whether the user can search a item in the Sub Category list using Search Button</td>
+<td title='testScript.LoginTest.verifyUserLoginWithInvalidUsernameAndValidPassword()'><b>verifyUserLoginWithInvalidUsernameAndValidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with invalid username and valid password</td>
 <td></td>
-<td>2</td>
-<td>testScript.SubCategoryTest@183ec003</td></tr>
-<tr>
-<td title='testScript.SubCategoryTest.verifyWhetherUserIsAbleToaddNewItemToSubCategoryList()'><b>verifyWhetherUserIsAbleToaddNewItemToSubCategoryList</b><br>Test class: testScript.SubCategoryTest<br>Test method: Verify whether the user can add new item in the Sub category list using New Button</td>
-<td></td>
-<td>3</td>
-<td>testScript.SubCategoryTest@183ec003</td></tr>
-<tr>
-<td title='testScript.SubCategoryTest.verifyWhetherUserIsAbleTorefreshPageUsingResetButton()'><b>verifyWhetherUserIsAbleTorefreshPageUsingResetButton</b><br>Test class: testScript.SubCategoryTest<br>Test method: Verify whether the user can refresh the Sub Category list using Reset Button</td>
-<td></td>
-<td>1</td>
-<td>testScript.SubCategoryTest@183ec003</td></tr>
+<td>0</td>
+<td>testScript.LoginTest@7bba5817</td></tr>
 <tr>
 <td title='testScript.AdminUserTest.verifyUserIsAbleToSearchNewlyAddedUsersInTheNewlyAddedUsersList()'><b>verifyUserIsAbleToSearchNewlyAddedUsersInTheNewlyAddedUsersList</b><br>Test class: testScript.AdminUserTest</td>
 <td></td>
-<td>3</td>
+<td>2</td>
 <td>testScript.AdminUserTest@5ddeb7cb</td></tr>
 <tr>
-<td title='testScript.AdminUserTest.verifyWhetherUserIsAbleToAddNewUserToTheUsersList()'><b>verifyWhetherUserIsAbleToAddNewUserToTheUsersList</b><br>Test class: testScript.AdminUserTest</td>
-<td></td>
-<td>3</td>
-<td>testScript.AdminUserTest@5ddeb7cb</td></tr>
-<tr>
-<td title='testScript.ManageNewsTest.verifyWhetherUserIsAbleToAddNewNewsInManageNews()'><b>verifyWhetherUserIsAbleToAddNewNewsInManageNews</b><br>Test class: testScript.ManageNewsTest<br>Test method: Verify whether the user can add new news in the News list using New Button</td>
+<td title='testScript.SubCategoryTest.verifyWhetherUserIsAbleToaddNewItemToSubCategoryList()'><b>verifyWhetherUserIsAbleToaddNewItemToSubCategoryList</b><br>Test class: testScript.SubCategoryTest<br>Test method: Verify whether the user can add new item in the Sub category list using New Button</td>
 <td></td>
 <td>2</td>
-<td>testScript.ManageNewsTest@7c137fd5</td></tr>
+<td>testScript.SubCategoryTest@183ec003</td></tr>
 <tr>
-<td title='testScript.LoginTest.verifyUserLoginWithInvalidUsernameAndValidPassword()'><b>verifyUserLoginWithInvalidUsernameAndValidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with invalid username and valid password</td>
+<td title='testScript.HomeTest.verifySuccessfullUserLogoutFromHomePageAfterLogin()'><b>verifySuccessfullUserLogoutFromHomePageAfterLogin</b><br>Test class: testScript.HomeTest<br>Test method: Verification of whether the user is able to use the Logout functionality after LogIn</td>
+<td></td>
+<td>1</td>
+<td>testScript.HomeTest@231f98ef</td></tr>
+<tr>
+<td title='testScript.LoginTest.verifyUserLoginWithInvalidUsernameAndInvalidPassword()'><b>verifyUserLoginWithInvalidUsernameAndInvalidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with invalid username and invalid password<br>Parameters: admin, Test</td>
 <td></td>
 <td>0</td>
 <td>testScript.LoginTest@7bba5817</td></tr>
@@ -431,10 +363,25 @@ Session ID: 81f8adbff18e9ae9464f4b1beef1436e
 <td>1</td>
 <td>testScript.ManageNewsTest@7c137fd5</td></tr>
 <tr>
-<td title='testScript.LoginTest.verifyUserLoginWithInvalidUsernameAndInvalidPassword()'><b>verifyUserLoginWithInvalidUsernameAndInvalidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with invalid username and invalid password<br>Parameters: ad123, admin</td>
+<td title='testScript.SubCategoryTest.verifyWhetherUserIsAbleTorefreshPageUsingResetButton()'><b>verifyWhetherUserIsAbleTorefreshPageUsingResetButton</b><br>Test class: testScript.SubCategoryTest<br>Test method: Verify whether the user can refresh the Sub Category list using Reset Button</td>
+<td></td>
+<td>1</td>
+<td>testScript.SubCategoryTest@183ec003</td></tr>
+<tr>
+<td title='testScript.LoginTest.verifyUserLoginWithValidUsernameAndInvalidPassword()'><b>verifyUserLoginWithValidUsernameAndInvalidPassword</b><br>Test class: testScript.LoginTest<br>Test method: Verification of user login with valid username and invalid password</td>
 <td></td>
 <td>0</td>
 <td>testScript.LoginTest@7bba5817</td></tr>
+<tr>
+<td title='testScript.ManageNewsTest.verifyWhetherUserIsAbleTosearchNewsInManageNews()'><b>verifyWhetherUserIsAbleTosearchNewsInManageNews</b><br>Test class: testScript.ManageNewsTest<br>Test method: Verify whether the user can search a news in the News list using Search Button</td>
+<td></td>
+<td>1</td>
+<td>testScript.ManageNewsTest@7c137fd5</td></tr>
+<tr>
+<td title='testScript.ManageNewsTest.verifyWhetherUserIsAbleToAddNewNewsInManageNews()'><b>verifyWhetherUserIsAbleToAddNewNewsInManageNews</b><br>Test class: testScript.ManageNewsTest<br>Test method: Verify whether the user can add new news in the News list using New Button</td>
+<td></td>
+<td>1</td>
+<td>testScript.ManageNewsTest@7c137fd5</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -446,61 +393,35 @@ Session ID: 81f8adbff18e9ae9464f4b1beef1436e
 </tr>
 <tr>
 <td title='testScript.HomeTest.verifySuccessfullUserLogoutFromHomePageAfterLogin()'><b>verifySuccessfullUserLogoutFromHomePageAfterLogin</b><br>Test class: testScript.HomeTest<br>Test method: Verification of whether the user is able to use the Logout functionality after LogIn</td>
-<td><div><pre>java.io.IOException: Stream Closed
-	at java.base/java.io.FileInputStream.available0(Native Method)
-	at java.base/java.io.FileInputStream.available(FileInputStream.java:473)
-	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:428)
-	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
-	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
-	at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:197)
-	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.fill(ZipArchiveInputStream.java:861)
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readFromInflater(ZipArchiveInputStream.java:650)
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readDeflated(ZipArchiveInputStream.java:625)
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.read(ZipArchiveInputStream.java:528)
-	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
-	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.read(ZipArchiveThresholdInputStream.java:80)
-	at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:240)
-	at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:203)
-	at org.apache.poi.openxml4j.util.ZipArchiveFakeEntry.&lt;init&gt;(ZipArchiveFakeEntry.java:82)
-	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:98)
+<td><div><pre>org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
+	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:94)
 	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:132)
 	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
 	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
-	at utilities.ExcelUtility.readStringData(ExcelUtility.java:19)
+	at utilities.ExcelUtility.readStringData(ExcelUtility.java:22)
 	at testScript.HomeTest.verifySuccessfullUserLogoutFromHomePageAfterLogin(HomeTest.java:25)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1960302635", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1960302635'><pre>java.io.IOException: Stream Closed
-	at java.base/java.io.FileInputStream.available0(Native Method)
-	at java.base/java.io.FileInputStream.available(FileInputStream.java:473)
-	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:428)
-	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
-	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
-	at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:197)
-	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.fill(ZipArchiveInputStream.java:861)
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readFromInflater(ZipArchiveInputStream.java:650)
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readDeflated(ZipArchiveInputStream.java:625)
-	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.read(ZipArchiveInputStream.java:528)
-	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
-	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.read(ZipArchiveThresholdInputStream.java:80)
-	at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:240)
-	at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:203)
-	at org.apache.poi.openxml4j.util.ZipArchiveFakeEntry.&lt;init&gt;(ZipArchiveFakeEntry.java:82)
-	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:98)
+Caused by: java.util.zip.ZipException: Unexpected record signature: 0X29348401
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
+	... 24 more
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace758661648", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace758661648'><pre>org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
+	at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.&lt;init&gt;(ZipInputStreamZipEntrySource.java:94)
 	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:132)
 	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
 	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:290)
 	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:286)
-	at utilities.ExcelUtility.readStringData(ExcelUtility.java:19)
+	at utilities.ExcelUtility.readStringData(ExcelUtility.java:22)
 	at testScript.HomeTest.verifySuccessfullUserLogoutFromHomePageAfterLogin(HomeTest.java:25)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -518,6 +439,10 @@ Session ID: 81f8adbff18e9ae9464f4b1beef1436e
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.util.zip.ZipException: Unexpected record signature: 0X29348401
+	at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
+	at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
+	... 24 more
 </pre></div></td>
 <td>0</td>
 <td>testScript.HomeTest@231f98ef</td></tr>

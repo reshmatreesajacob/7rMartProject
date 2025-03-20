@@ -2,18 +2,17 @@ package constants;
 
 public class Constants {
 
-	// to specify the file path
-	public static final String TESTDATAFILE = System.getProperty("user.dir")
-			+ "\\src\\test\\resources\\Test Datas.xlsx";
+	//to specify the project path
+		public static final String TESTDATAFILE = System.getProperty("user.dir") + "\\src\\test\\resources\\Test Data.xlsx";
+		// user.dir --> to know the system files
 
-	// to specify the image path
-	public static final String IMAGEFILE = System.getProperty("user.dir")
-			+ "\\src\\test\\resources\\sports Toy cars.jpg";
+		// TO DEFINE IMAGE PATH
+		public static final String IMAGEFILE = System.getProperty("user.dir") + "\\src\\test\\resources\\sports Toy car.jpg";
 
-	// to specify the url 
-	public static final String CONFIGFILE = System.getProperty("user.dir")
-			+ "\\src\\main\\resources\\Config.properties";
+		// TO DEFINE url PATH
+		public static final String CONFIGFILE=System.getProperty("user.dir") +"\\src\\main\\resources\\Config.properties";
 
 	// to pass values
 	public static final String ADMINUSERDROPDOWNVALE="staff";
+	
 }

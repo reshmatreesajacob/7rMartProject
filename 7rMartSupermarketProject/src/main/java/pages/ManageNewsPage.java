@@ -1,4 +1,4 @@
-package pages;
+ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +14,10 @@ public class ManageNewsPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
 
+//	@FindBy(xpath = "//p[text()='Manage News']")
+//	private WebElement manageNews;
 	@FindBy(xpath = "//a[text()=' New']")
 	private WebElement newButton;
 	@FindBy(xpath = "//textarea[@id='news']")
@@ -35,6 +38,10 @@ public class ManageNewsPage {
 	private WebElement refreshNewsDisplayed;
 	@FindBy(xpath = "//td[text()='todsys news updated']")
 	private WebElement searchNewsIsDisplayed;
+	
+//	public void clickOnManageNewsButton() {
+//	manageNews.click();
+//}
 
 	public ManageNewsPage clickOnNewButtonOfManageNewsPage() {
 		newButton.click();

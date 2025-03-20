@@ -18,6 +18,8 @@ public class AdminUserPage {
 		PageFactory.initElements(driver, this);
 	}
 
+//	@FindBy(xpath = "//p[contains(text(),' Admin')]")
+//	private WebElement adminUsers;
 	@FindBy(xpath = "//p[text()='Manage Users']")
 	private WebElement manageUsers;
 	@FindBy(xpath = "//a[text()=' New']")
@@ -27,7 +29,7 @@ public class AdminUserPage {
 	@FindBy(xpath = "//input[@id='password']")
 	private WebElement newPassword;
 	@FindBy(xpath = "//select[@id='user_type']")
-	private WebElement userType;
+	private WebElement userType; 
 	@FindBy(xpath = "//button[@name='Create']")
 	private WebElement saveButton;
 	@FindBy(xpath = "//a[text()=' Reset']")
@@ -46,6 +48,11 @@ public class AdminUserPage {
 	private WebElement refreshUsersIsDisplayed;
 	@FindBy(xpath = "//td[text()='movieuser']")
 	private WebElement searchUserListIsDisplayed;
+	
+//	public AdminUserPage clickOnAdminUsersButton() {
+//	adminUsers.click();
+//	return new AdminUserPage(driver);
+//}
 
 	public AdminUserPage clickOnManageUsersButton() {
 		manageUsers.click();
