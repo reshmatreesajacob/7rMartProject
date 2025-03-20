@@ -29,7 +29,7 @@ public class AdminUserPage {
 	@FindBy(xpath = "//input[@id='password']")
 	private WebElement newPassword;
 	@FindBy(xpath = "//select[@id='user_type']")
-	private WebElement userType;
+	private WebElement userType; 
 	@FindBy(xpath = "//button[@name='Create']")
 	private WebElement saveButton;
 	@FindBy(xpath = "//a[text()=' Reset']")

@@ -4,6 +4,13 @@
   <test thread-count="2" parallel="classes" name="Test(failed)">
     <parameter name="browser" value="Chrome"/>
     <classes>
+      <class name="testScript.LoginTest">
+        <methods>
+          <include name="driverQuit"/>
+          <include name="verifyUserLoginWithInvalidUsernameAndInvalidPassword" invocation-numbers="1 2"/>
+          <include name="intializeBrowser"/>
+        </methods>
+      </class> <!-- testScript.LoginTest -->
       <class name="testScript.AdminUserTest">
         <methods>
           <include name="driverQuit"/>

@@ -20,5 +20,6 @@ public class Messages {
 	public static final String MANAGENEWSCREATIONERROR = "User was unable to create new news!";
 	public static final String MANAGENEWSREFRESHPAGEERROR = "User was unable to refresh the news list!";
 	public static final String MANAGENEWSSEARCHPAGEERROR = "User is unableto search a item";
+	
 
 }
