@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-19T13:15:36 IST" name="Suite" finished-at="2025-03-19T13:15:41 IST" duration-ms="4902">
+  <suite started-at="2025-03-20T13:18:45 IST" name="Suite" finished-at="2025-03-20T13:18:49 IST" duration-ms="4149">
     <groups>
     </groups>
-    <test started-at="2025-03-19T13:15:36 IST" name="Test" finished-at="2025-03-19T13:15:41 IST" duration-ms="4902">
+    <test started-at="2025-03-20T13:18:45 IST" name="Test" finished-at="2025-03-20T13:18:49 IST" duration-ms="4149">
       <class name="testScript.AdminUserTest">
-        <test-method is-config="true" signature="intializeBrowser(java.lang.String)[pri:0, instance:testScript.AdminUserTest@30af5b6b]" started-at="2025-03-19T13:15:36 IST" name="intializeBrowser" finished-at="2025-03-19T13:15:38 IST" duration-ms="2239" status="PASS">
+        <test-method is-config="true" signature="intializeBrowser(java.lang.String)[pri:0, instance:testScript.AdminUserTest@30af5b6b]" started-at="2025-03-20T13:18:45 IST" name="intializeBrowser" finished-at="2025-03-20T13:18:47 IST" duration-ms="2022" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intializeBrowser -->
-        <test-method signature="verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton()[pri:0, instance:testScript.AdminUserTest@30af5b6b]" started-at="2025-03-19T13:15:38 IST" name="verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton" finished-at="2025-03-19T13:15:41 IST" duration-ms="2458" status="PASS">
+        <test-method signature="verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton()[pri:0, instance:testScript.AdminUserTest@30af5b6b]" started-at="2025-03-20T13:18:47 IST" name="verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton" finished-at="2025-03-20T13:18:49 IST" duration-ms="1926" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserIsAbleToRefreshNewlyAddedUserPageUsingTheResetButton -->
-        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.AdminUserTest@30af5b6b]" started-at="2025-03-19T13:15:41 IST" name="driverQuit" finished-at="2025-03-19T13:15:41 IST" duration-ms="167" status="PASS">
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.AdminUserTest@30af5b6b]" started-at="2025-03-20T13:18:49 IST" name="driverQuit" finished-at="2025-03-20T13:18:49 IST" duration-ms="165" status="PASS">
           <params>
             <param index="0">
               <value>

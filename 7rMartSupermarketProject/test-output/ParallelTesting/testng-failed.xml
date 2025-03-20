@@ -4,20 +4,6 @@
   <test thread-count="2" parallel="classes" name="Test(failed)">
     <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="testScript.LoginTest">
-        <methods>
-          <include name="driverQuit"/>
-          <include name="verifyUserLoginWithInvalidUsernameAndInvalidPassword" invocation-numbers="0 2"/>
-          <include name="intializeBrowser"/>
-        </methods>
-      </class> <!-- testScript.LoginTest -->
-      <class name="testScript.ManageNewsTest">
-        <methods>
-          <include name="verifyWhetherUserIsAbleTosearchNewsInManageNews"/>
-          <include name="driverQuit"/>
-          <include name="intializeBrowser"/>
-        </methods>
-      </class> <!-- testScript.ManageNewsTest -->
       <class name="testScript.AdminUserTest">
         <methods>
           <include name="driverQuit"/>
