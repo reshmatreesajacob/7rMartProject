@@ -44,6 +44,7 @@ public class LoginPage {
 	public LoginPage clickOnCheckbox() {
 		PageUtility page=new PageUtility();
 		page.clickOnCheckbox(rememberMeCheckbox);
+//		rememberMeCheckbox.click();
 		return this;
 	}
 

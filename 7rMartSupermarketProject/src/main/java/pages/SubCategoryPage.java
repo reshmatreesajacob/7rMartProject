@@ -19,6 +19,8 @@ public class SubCategoryPage {
 		PageFactory.initElements(driver, this);
 	}
 
+//	@FindBy(xpath = "//p[text()='Sub Category']")
+//	private WebElement subCategory;
 	@FindBy(xpath = "//a[text()=' New']")
 	private WebElement newButton;
 	@FindBy(xpath = "//select[@id='cat_id']")
@@ -46,6 +48,10 @@ public class SubCategoryPage {
 	private WebElement refreshSubCategoryDisplayed;
 	@FindBy(xpath = "//td[text()='Sports Toy Car2']")
 	private WebElement searchSubcategoryIsDisplayed;
+	
+//	public void clickOnSubCategoryButton() {
+//	subCategory.click();
+//}
 
 	public SubCategoryPage clickOnNewButtonOfSubCategoryPage() {
 		newButton.click();
@@ -64,6 +70,14 @@ public class SubCategoryPage {
 		subCategoryText.sendKeys(subCategory1);
 		return this;
 	}
+	
+	// 2 ways -- using excel or from constants class
+
+//	public void selectImageOfSubCategoryCreationPage(String image) {
+//		imageUploadButton.sendKeys(image);
+//	}
+
+	// CALLING USING CONSTANTS
 
 	public SubCategoryPage selectImageOfSubCategoryCreationPage() {
 		imageUploadButton.sendKeys(Constants.IMAGEFILE);

@@ -16,6 +16,8 @@ public class ExcelUtility {
 	static XSSFSheet sh;
 
 	public static String readStringData(int row, int col, String sheet) throws IOException {
+//		f = new FileInputStream(
+//				"C:\\Users\\RESHMA\\git\\7rMartProject\\7rMartSupermarketProject\\src\\test\\resources\\Test Data.xlsx");
 		f = new FileInputStream(Constants.TESTDATAFILE);
 		w = new XSSFWorkbook(f);
 		sh = w.getSheet(sheet);
@@ -25,6 +27,8 @@ public class ExcelUtility {
 	}
 
 	public static String readIntegerData(int row, int col, String sheet) throws IOException {
+	//	f = new FileInputStream(
+//				"C:\\Users\\RESHMA\\git\\7rMartProject\\7rMartSupermarketProject\\src\\test\\resources\\Test Data.xlsx");
 		f = new FileInputStream(Constants.TESTDATAFILE);
 		w = new XSSFWorkbook(f);
 		sh = w.getSheet(sheet);

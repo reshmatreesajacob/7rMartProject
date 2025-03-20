@@ -18,6 +18,8 @@ public class AdminUserPage {
 		PageFactory.initElements(driver, this);
 	}
 
+//	@FindBy(xpath = "//p[contains(text(),' Admin')]")
+//	private WebElement adminUsers;
 	@FindBy(xpath = "//p[text()='Manage Users']")
 	private WebElement manageUsers;
 	@FindBy(xpath = "//a[text()=' New']")
@@ -46,6 +48,11 @@ public class AdminUserPage {
 	private WebElement refreshUsersIsDisplayed;
 	@FindBy(xpath = "//td[text()='movieuser']")
 	private WebElement searchUserListIsDisplayed;
+	
+//	public AdminUserPage clickOnAdminUsersButton() {
+//	adminUsers.click();
+//	return new AdminUserPage(driver);
+//}
 
 	public AdminUserPage clickOnManageUsersButton() {
 		manageUsers.click();
