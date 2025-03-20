@@ -6,14 +6,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.PageUtility;
+
 public class LoginPage {
 
 	public WebDriver driver;
 
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
-		// initElements is a method to initialize the elements in this class in
-		// PageFactory class
 		PageFactory.initElements(driver, this);
 	}
 
@@ -42,7 +42,8 @@ public class LoginPage {
 	}
 
 	public LoginPage clickOnCheckbox() {
-		rememberMeCheckbox.click();
+		PageUtility page=new PageUtility();
+		page.clickOnCheckbox(rememberMeCheckbox);
 		return this;
 	}
 

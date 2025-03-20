@@ -15,12 +15,10 @@ public class WaitUtility {
 	public static int EXPLICITWAIT = 5;
 	public static int IMPLICITWAIT = 5;
 
-	// implicit wait
 	public void implicitWait(WebDriver driver) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICITWAIT));
 	}
 
-	// Fluent wait
 	public void fluentWaitElements(WebDriver driver, WebElement element, String attribute, String attributeValue,
 			int total) {
 		Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(total))
@@ -28,7 +26,6 @@ public class WaitUtility {
 		fluentWait.until(ExpectedConditions.attributeContains(element, attribute, attributeValue));// any of these
 	}
 
-	// Explicit wait
 	public void waitForWebElementAlertIsPresent(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(EXPLICITWAIT));
 		wait.until(ExpectedConditions.alertIsPresent());

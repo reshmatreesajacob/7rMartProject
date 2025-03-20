@@ -12,8 +12,6 @@ public class HomePage {
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
-		// initElements is a method to initialize the elements in this class in
-		// PageFqactory class
 		PageFactory.initElements(driver, this);
 	}
 
