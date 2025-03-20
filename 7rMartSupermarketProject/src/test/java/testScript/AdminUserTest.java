@@ -37,6 +37,7 @@ public class AdminUserTest extends Base {
 //		String newUsername = ExcelUtility.readStringData(2, 0, "AdminUserPage");
 //		String newPassword = ExcelUtility.readStringData(2, 1, "AdminUserPage");
 
+		
 		FakerUtility faker = new FakerUtility();
 		String newUsername = faker.createRandomUsername();
 		String newPassword = faker.createRandomPassword();
