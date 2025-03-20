@@ -7,6 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import constants.Constants;
+import utilities.PageUtility;
+
 public class AdminUserPage {
 	public WebDriver driver;
 
@@ -15,8 +18,6 @@ public class AdminUserPage {
 		PageFactory.initElements(driver, this);
 	}
 
-//	@FindBy(xpath = "//p[contains(text(),' Admin')]")
-//	private WebElement adminUsers;
 	@FindBy(xpath = "//p[text()='Manage Users']")
 	private WebElement manageUsers;
 	@FindBy(xpath = "//a[text()=' New']")
@@ -46,11 +47,6 @@ public class AdminUserPage {
 	@FindBy(xpath = "//td[text()='movieuser']")
 	private WebElement searchUserListIsDisplayed;
 
-//	public AdminUserPage clickOnAdminUsersButton() {
-//		adminUsers.click();
-//		return new AdminUserPage(driver);
-//	}
-
 	public AdminUserPage clickOnManageUsersButton() {
 		manageUsers.click();
 		return this;
@@ -72,8 +68,11 @@ public class AdminUserPage {
 	}
 
 	public AdminUserPage selectNewUserTypeOnUserTypeField(String userType) {
-		Select user = new Select(this.userType);
-		user.selectByContainsVisibleText(userType);
+		//userType=Constants.ADMINUSERDROPDOWNVALE;
+		PageUtility page=new PageUtility();
+		page.selectDropdownWithVisibleText(this.userType, userType);
+//		Select user = new Select(this.userType);
+//		user.selectByContainsVisibleText(userType);
 		return this;
 	}
 
@@ -98,8 +97,10 @@ public class AdminUserPage {
 	}
 
 	public AdminUserPage selectUserTypeOnUserTypeFieldOfSearchPage(String userType) {
-		Select user = new Select(this.searchUserType);
-		user.selectByContainsVisibleText(userType);
+		PageUtility page=new PageUtility();
+		page.selectDropdownWithVisibleText(this.searchUserType, userType);
+//		Select user = new Select(this.searchUserType);
+//		user.selectByContainsVisibleText(userType);
 		return this;
 	}
 

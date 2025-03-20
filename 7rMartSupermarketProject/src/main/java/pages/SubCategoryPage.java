@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import constants.Constants;
+import utilities.PageUtility;
 
 public class SubCategoryPage {
 
@@ -18,8 +19,6 @@ public class SubCategoryPage {
 		PageFactory.initElements(driver, this);
 	}
 
-//	@FindBy(xpath = "//p[text()='Sub Category']")
-//	private WebElement subCategory;
 	@FindBy(xpath = "//a[text()=' New']")
 	private WebElement newButton;
 	@FindBy(xpath = "//select[@id='cat_id']")
@@ -48,18 +47,16 @@ public class SubCategoryPage {
 	@FindBy(xpath = "//td[text()='Sports Toy Car2']")
 	private WebElement searchSubcategoryIsDisplayed;
 
-//	public void clickOnSubCategoryButton() {
-//		subCategory.click();
-//	}
-
 	public SubCategoryPage clickOnNewButtonOfSubCategoryPage() {
 		newButton.click();
 		return this;
 	}
 
 	public SubCategoryPage selectCategoryFromSubCategoryCreationPage(String category1) {
-		Select select = new Select(categorySelection);
-		select.selectByContainsVisibleText(category1);
+		PageUtility page=new PageUtility();
+		page.selectDropdownWithVisibleText(categorySelection, category1);
+//		Select select = new Select(categorySelection);
+//		select.selectByContainsVisibleText(category1);
 		return this;
 	}
 
@@ -68,13 +65,6 @@ public class SubCategoryPage {
 		return this;
 	}
 
-	// 2 ways -- using excel or from constants class
-	
-//	public void selectImageOfSubCategoryCreationPage(String image) {
-//		imageUploadButton.sendKeys(image);
-//	}
-
-	// CALLING USING CONSTANTS
 	public SubCategoryPage selectImageOfSubCategoryCreationPage() {
 		imageUploadButton.sendKeys(Constants.IMAGEFILE);
 		return this;
@@ -96,8 +86,10 @@ public class SubCategoryPage {
 	}
 
 	public SubCategoryPage selectCategoryFromSubCategorySearchPage(String category1) {
-		Select select = new Select(searchCategory);
-		select.selectByContainsVisibleText(category1);
+		PageUtility page=new PageUtility();
+		page.selectDropdownWithVisibleText(searchCategory, category1);
+//		Select select = new Select(searchCategory);
+//		select.selectByContainsVisibleText(category1);
 		return this;
 	}
 
